@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What your distribution actually costs — Imara Digital</title>
+<meta name="description" content="Work out what your lodge paid in booking commission last year, and how much of it you could realistically have kept.">
+
+<!-- Link preview in WhatsApp. Replace both URLs with your real domain once the
+     page is live, and upload imara-og-image.png next to it. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="What your distribution actually costs">
+<meta property="og:description" content="Work out what your lodge paid in booking commission last year, and how much of it you could realistically have kept.">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/imara-og-image.png">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#071735;
+    --blue:#1450EE;
+    --paper:#F3F6FC;
+    --card:#FFFFFF;
+    --line:#DCE3F0;
+    --muted:#52627F;
+    --loss:#C62828;
+    --ch-ota:#93A2BE;
+    --ch-op:#4A5C7E;
+    --wa:#25D366;
+
+    --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+
+  body{
+    background:var(--paper);
+    color:var(--navy);
+    font-family:var(--sans);
+    font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+  /* ---------- masthead ---------- */
+
+  .mast{padding:28px 0 0}
+  .mast img{width:243px;height:auto;display:block}
+  @media (max-width:640px){ .mast img{width:200px} }
+
+  /* ---------- hero ---------- */
+
+  .hero{padding:44px 0 40px}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--blue);margin:0 0 18px;
+  }
+
+  .hero h1{
+    font-family:var(--mono);font-weight:600;
+    font-size:clamp(1.9rem,4.6vw,3.1rem);
+    line-height:1.08;letter-spacing:-.035em;
+    margin:0 0 20px;max-width:19ch;
+  }
+  .hero h1 em{font-style:normal;color:var(--blue)}
+
+  .hero p{max-width:56ch;color:var(--muted);font-size:1.04rem;margin:0}
+
+  /* ---------- grid ---------- */
+
+  .grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+    gap:24px;align-items:start;padding-bottom:52px;
+  }
+
+  .panel{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;padding:30px;
+  }
+
+  .panel-title{
+    font-family:var(--mono);font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 24px;
+    padding-bottom:12px;border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- inputs ---------- */
+
+  .field{margin-bottom:22px}
+  .field > label{display:block;font-size:.92rem;font-weight:600;margin-bottom:7px}
+
+  .hint{display:block;font-size:.78rem;color:var(--muted);line-height:1.45;margin-top:6px}
+
+  .row{display:flex;gap:14px}
+  .row > .field{flex:1}
+
+  input[type=number],select{
+    width:100%;background:var(--paper);
+    border:1px solid var(--line);color:var(--navy);
+    font-family:var(--mono);font-size:1rem;
+    padding:11px 12px;border-radius:3px;appearance:none;
+  }
+
+  input[type=number]:focus,select:focus,
+  input[type=range]:focus-visible,
+  button:focus-visible,a:focus-visible,summary:focus-visible{
+    outline:2px solid var(--blue);outline-offset:2px;
+  }
+
+  .with-symbol{position:relative}
+  .with-symbol .sym{
+    position:absolute;left:12px;top:50%;transform:translateY(-50%);
+    font-family:var(--mono);font-size:.9rem;color:var(--muted);pointer-events:none;
+  }
+  .with-symbol input{padding-left:52px}
+
+  .slider-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+  .slider-head .val{font-family:var(--mono);font-size:.95rem;color:var(--blue);font-weight:600}
+
+  input[type=range]{width:100%;appearance:none;background:transparent;height:24px;margin:0;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:3px;background:var(--line);border-radius:2px}
+  input[type=range]::-moz-range-track{height:3px;background:var(--line);border-radius:2px}
+  input[type=range]::-webkit-slider-thumb{
+    appearance:none;width:16px;height:16px;border-radius:50%;
+    background:var(--blue);margin-top:-6.5px;border:none;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%;background:var(--blue);border:none;
+  }
+
+  /* ---------- signature: channel mix ---------- */
+
+  .mix{margin:30px 0 8px}
+  .mix-chart{display:flex;gap:3px;align-items:flex-start;height:130px}
+
+  .mix-col{display:flex;flex-direction:column;min-width:0;transition:flex-grow .35s cubic-bezier(.4,0,.2,1)}
+  .mix-rev{height:44px;border-radius:3px 3px 0 0}
+
+  .mix-col[data-ch=ota] .mix-rev{background:var(--ch-ota)}
+  .mix-col[data-ch=op]  .mix-rev{background:var(--ch-op)}
+  .mix-col[data-ch=dir] .mix-rev{background:var(--blue)}
+
+  .mix-cost{background:var(--loss);border-radius:0 0 3px 3px;transition:height .35s cubic-bezier(.4,0,.2,1)}
+
+  .mix-key{display:flex;gap:3px;margin:10px 0 0;padding:0}
+
+  .mix-key li{
+    display:flex;align-items:center;gap:6px;min-width:0;list-style:none;
+    font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);overflow:hidden;white-space:nowrap;
+    transition:flex-grow .35s cubic-bezier(.4,0,.2,1);
+  }
+
+  .sw{display:none;width:9px;height:9px;flex:0 0 9px;border-radius:2px}
+  .sw.ota{background:var(--ch-ota)}
+  .sw.op{background:var(--ch-op)}
+  .sw.dir{background:var(--blue)}
+
+  .mix-caption{font-size:.78rem;color:var(--muted);margin:14px 0 0;line-height:1.5}
+
+  /* ---------- assumptions ---------- */
+
+  details.assump{margin-top:26px;border-top:1px solid var(--line);padding-top:18px}
+  details.assump > summary{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--blue);cursor:pointer;list-style:none;font-weight:600;
+  }
+  details.assump > summary::-webkit-details-marker{display:none}
+  details.assump > summary::before{content:"+ "}
+  details.assump[open] > summary::before{content:"\2013 "}
+  .assump-body{padding-top:20px}
+
+  /* ---------- ledger ---------- */
+
+  .ledger{font-family:var(--mono);font-size:.9rem}
+  .led-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+  .led-row span:first-child{color:var(--muted)}
+  .led-row span:last-child{white-space:nowrap}
+  .led-row.neg span:last-child{color:var(--loss)}
+  .led-row.total{border-top:1px solid var(--line);margin-top:6px;padding-top:14px;font-weight:600}
+  .led-row.total span:first-child{color:var(--navy)}
+
+  .headline{
+    margin-top:26px;border:2px solid var(--blue);
+    border-radius:4px;padding:24px;background:rgba(20,80,238,.04);
+  }
+  .headline .lbl{
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--blue);margin:0 0 12px;font-weight:600;
+  }
+  .headline .big{
+    font-family:var(--mono);font-weight:600;
+    font-size:clamp(1.9rem,4.6vw,2.7rem);
+    line-height:1;letter-spacing:-.035em;margin:0;color:var(--navy);
+  }
+  .headline .sub{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin:12px 0 0}
+
+  /* ---------- whatsapp cta ---------- */
+
+  .wa-btn{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:20px;padding:15px 18px;
+    background:var(--wa);color:#062B14;
+    font-family:var(--sans);font-size:1rem;font-weight:600;
+    text-decoration:none;border-radius:4px;transition:filter .18s ease;
+  }
+  .wa-btn:hover{filter:brightness(1.06)}
+  .wa-btn svg{flex:0 0 20px}
+
+  .wa-note{font-size:.78rem;color:var(--muted);text-align:center;margin:10px 0 0}
+
+  .caveat{
+    font-size:.84rem;color:var(--muted);line-height:1.6;
+    margin:22px 0 0;padding-left:14px;border-left:3px solid var(--line);
+  }
+
+  /* ---------- utility bar ---------- */
+
+  .utils{display:flex;gap:10px;margin-top:20px}
+  .utils button{
+    flex:1;background:transparent;border:1px solid var(--line);color:var(--muted);
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    padding:11px 8px;border-radius:3px;cursor:pointer;
+    transition:border-color .18s ease,color .18s ease;
+  }
+  .utils button:hover{border-color:var(--blue);color:var(--blue)}
+
+  /* ---------- explainer ---------- */
+
+  .explain{border-top:1px solid var(--line);padding:52px 0 56px}
+  .explain h2{
+    font-family:var(--mono);font-weight:600;
+    font-size:clamp(1.4rem,3vw,1.95rem);
+    line-height:1.18;letter-spacing:-.03em;margin:0 0 34px;max-width:26ch;
+  }
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+  .cards h3{
+    font-family:var(--sans);font-size:.95rem;font-weight:600;
+    margin:0 0 9px;padding-top:14px;border-top:3px solid var(--blue);
+  }
+  .cards p{font-size:.9rem;color:var(--muted);line-height:1.6;margin:0}
+
+  /* ---------- footer ---------- */
+
+  footer{border-top:1px solid var(--line);padding:40px 0 60px}
+  footer p.brand{
+    font-family:var(--mono);font-weight:600;font-size:1rem;
+    letter-spacing:-.02em;margin:0 0 8px;color:var(--navy);
+  }
+  footer p.blurb{max-width:52ch;font-size:.88rem;color:var(--muted);margin:0 0 16px}
+  footer a{color:var(--blue);text-decoration:none;font-size:.88rem;font-weight:600}
+  footer a:hover{text-decoration:underline}
+
+  .print-only{display:none}
+
+  @media (max-width:900px){
+    .grid{grid-template-columns:1fr}
+    .hero{padding:36px 0 28px}
+    .wrap{padding:0 20px}
+    .panel{padding:22px}
+  }
+
+  @media (max-width:640px){
+    .mix-key{flex-direction:column;gap:7px;margin-top:14px}
+    .mix-key li{flex-grow:0 !important;font-size:11px}
+    .sw{display:block}
+  }
+
+  @media (prefers-reduced-motion:reduce){ *{transition-duration:.01ms !important} }
+
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none;padding:0}
+    .panel{border:1px solid #b9c3d4;padding:16px;break-inside:avoid;margin-bottom:14px}
+    .hero{padding:0 0 18px}
+    .hero h1{font-size:1.5rem;max-width:none}
+    .grid{display:block}
+    .headline{background:none;break-inside:avoid}
+    .field,details.assump,.utils,.wa-btn,.wa-note,.explain,.mix{display:none}
+    .print-only{display:block}
+    .print-only h3{
+      font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+      text-transform:uppercase;color:var(--muted);margin:0 0 10px;
+    }
+    .print-only .led-row{padding:5px 0;border-bottom:1px dotted var(--line)}
+    footer{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="mast">
+    <img src="data:image/png;base64,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" alt="Imara Digital" width="243" height="46">
+  </div>
+
+  <header class="hero">
+    <p class="eyebrow">For lodge and camp owners · Northern Tanzania</p>
+    <h1>What your distribution <em>actually</em> costs.</h1>
+    <p>Every booking arrives through a channel, and every channel takes a cut. This works out what you paid last year — and, more usefully, how much of it you could realistically have kept. Not all of it. Here is the honest figure.</p>
+  </header>
+
+  <div class="grid">
+
+    <section class="panel">
+      <h2 class="panel-title">Your property</h2>
+
+      <div class="row">
+        <div class="field">
+          <label for="rooms">Rooms</label>
+          <input type="number" id="rooms" value="15" min="1" max="2000" step="1">
+        </div>
+        <div class="field">
+          <label for="currency">Currency</label>
+          <select id="currency">
+            <option value="USD" selected>USD $</option>
+            <option value="TZS">TZS</option>
+            <option value="KES">KES</option>
+            <option value="EUR">EUR €</option>
+            <option value="GBP">GBP £</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field with-symbol">
+        <label for="adr">Average nightly rate</label>
+        <span class="sym" id="sym">$</span>
+        <input type="number" id="adr" value="120" min="1" step="1">
+        <span class="hint">What a room actually sells for on average across the year, after discounts.</span>
+      </div>
+
+      <div class="field">
+        <div class="slider-head">
+          <label for="occ">Annual occupancy</label>
+          <span class="val" id="occ-val">45%</span>
+        </div>
+        <input type="range" id="occ" min="5" max="100" value="45" step="1">
+        <span class="hint">Your year-round average, including the long rains and any months you close.</span>
+      </div>
+
+      <h2 class="panel-title" style="margin-top:34px">Where bookings come from</h2>
+
+      <div class="field">
+        <div class="slider-head">
+          <label for="ota">Online travel agents</label>
+          <span class="val" id="ota-val">60%</span>
+        </div>
+        <input type="range" id="ota" min="0" max="100" value="60" step="1">
+      </div>
+
+      <div class="field">
+        <div class="slider-head">
+          <label for="op">Tour operators and agents</label>
+          <span class="val" id="op-val">20%</span>
+        </div>
+        <input type="range" id="op" min="0" max="100" value="20" step="1">
+      </div>
+
+      <div class="field" style="margin-bottom:0">
+        <div class="slider-head">
+          <label>Direct</label>
+          <span class="val" id="dir-val">20%</span>
+        </div>
+        <span class="hint">Whatever is left — your own site, phone, WhatsApp, repeat guests.</span>
+      </div>
+
+      <div class="mix">
+        <div class="mix-chart">
+          <div class="mix-col" data-ch="ota" id="col-ota"><div class="mix-rev"></div><div class="mix-cost" id="cost-ota"></div></div>
+          <div class="mix-col" data-ch="op"  id="col-op"><div class="mix-rev"></div><div class="mix-cost" id="cost-op"></div></div>
+          <div class="mix-col" data-ch="dir" id="col-dir"><div class="mix-rev"></div><div class="mix-cost" id="cost-dir"></div></div>
+        </div>
+        <ul class="mix-key">
+          <li id="key-ota"><i class="sw ota"></i><span id="lab-ota">OTA 60%</span></li>
+          <li id="key-op"><i class="sw op"></i><span id="lab-op">Operator 20%</span></li>
+          <li id="key-dir"><i class="sw dir"></i><span id="lab-dir">Direct 20%</span></li>
+        </ul>
+        <p class="mix-caption">The top blocks are the share of your revenue. The red beneath each one is what that channel charges to deliver it. Operators are usually a smaller slice at a steeper rate.</p>
+      </div>
+
+      <details class="assump">
+        <summary>Assumptions — change any of these</summary>
+        <div class="assump-body">
+          <div class="field">
+            <div class="slider-head">
+              <label for="ota-rate">OTA commission rate</label>
+              <span class="val" id="ota-rate-val">15%</span>
+            </div>
+            <input type="range" id="ota-rate" min="8" max="30" value="15" step="1">
+            <span class="hint">15% is the published rate. Visibility programmes and preferred-partner status push many properties to 18–22% — if that is what you actually pay, set it here.</span>
+          </div>
+          <div class="field">
+            <div class="slider-head">
+              <label for="op-rate">Operator commission rate</label>
+              <span class="val" id="op-rate-val">22%</span>
+            </div>
+            <input type="range" id="op-rate" min="10" max="40" value="22" step="1">
+          </div>
+          <div class="field">
+            <div class="slider-head">
+              <label for="winback">OTA bookings winnable direct</label>
+              <span class="val" id="winback-val">30%</span>
+            </div>
+            <input type="range" id="winback" min="0" max="60" value="30" step="1">
+            <span class="hint">Guests who already knew your name and booked on an OTA out of habit. 30% is a cautious figure for a property that works at it.</span>
+          </div>
+          <div class="field" style="margin-bottom:0">
+            <div class="slider-head">
+              <label for="dircost">Cost of taking a booking direct</label>
+              <span class="val" id="dircost-val">6%</span>
+            </div>
+            <input type="range" id="dircost" min="0" max="15" value="6" step="1">
+            <span class="hint">Booking engine, card fees, and defending your own name in search. Direct is cheaper, not free.</span>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-title">Last year, in round numbers</h2>
+
+      <div class="ledger">
+        <div class="led-row"><span>Room nights sold</span><span id="o-nights">2,464</span></div>
+        <div class="led-row"><span>Room revenue</span><span id="o-rev">$295,650</span></div>
+        <div class="led-row neg"><span>Paid to OTAs</span><span id="o-ota">–$26,609</span></div>
+        <div class="led-row neg"><span>Paid to operators</span><span id="o-op">–$13,009</span></div>
+        <div class="led-row total neg"><span>Total commission</span><span id="o-total">–$39,617</span></div>
+      </div>
+
+      <div class="headline">
+        <p class="lbl">Realistically recoverable, per year</p>
+        <p class="big" id="o-recover">$4,790</p>
+        <p class="sub" id="o-perroom">$27 per room, per month · $14,369 over three years</p>
+      </div>
+
+      <a class="wa-btn" id="wa-btn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1-1.44-5.01c0-5.18 4.22-9.4 9.42-9.4a9.33 9.33 0 0 1 6.65 2.76 9.34 9.34 0 0 1 2.75 6.65c0 5.18-4.22 9.4-9.41 9.4M20.5 3.49A11.8 11.8 0 0 0 12.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.59 5.93L.08 24l6.35-1.66a11.8 11.8 0 0 0 5.61 1.43h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.47-8.39"/></svg>
+        <span>Send this to Theo</span>
+      </a>
+      <p class="wa-note">Opens WhatsApp with your figures already written out. No form, no email.</p>
+
+      <div class="utils">
+        <button type="button" id="btn-print" data-label="Print or save PDF">Print or save PDF</button>
+        <button type="button" id="btn-copy" data-label="Copy link">Copy link</button>
+      </div>
+
+      <p class="caveat">Note what this figure is not. It is not your total commission bill — most of that buys you real distribution you would struggle to replace. It is the portion sitting with guests who already knew your name and booked through an OTA anyway, less what it costs to take that booking yourself.</p>
+
+      <div class="print-only" style="margin-top:24px">
+        <h3>Figures used</h3>
+        <div class="ledger" id="print-summary"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="explain">
+    <h2>Why the recoverable number is so much smaller than the bill</h2>
+    <div class="cards">
+      <div>
+        <h3>OTAs are also a shop window</h3>
+        <p>A share of the guests who book through an OTA would never have found you otherwise. That commission bought you a guest. Remove the channel and you remove the guest with it — which is why nobody sensible goes to zero.</p>
+      </div>
+      <div>
+        <h3>Operators sell you where you cannot reach</h3>
+        <p>Their rate is steeper than an OTA's, but they place guests through relationships built over years in markets where you have no presence. This is the least recoverable money on the page, and it is usually money well spent.</p>
+      </div>
+      <div>
+        <h3>Direct costs something too</h3>
+        <p>A booking engine takes its percent, the card processor takes its percent, and defending your own name in search costs money. The saving is the gap between the two, not the whole commission.</p>
+      </div>
+      <div>
+        <h3>The recoverable slice is repeat business</h3>
+        <p>The realistic win is the guest who searched for you by name, landed on an OTA, and booked there because it was easier. That booking was always yours. It is smaller than the headline — and it returns every single year.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="brand">Imara Digital</p>
+    <p class="blurb" id="brand-blurb">We help lodges and camps in northern Tanzania take more of their bookings direct — booking engines, direct-booking sites, and the rate discipline that keeps them working.</p>
+    <a id="foot-wa" href="#" target="_blank" rel="noopener">Talk to Theo on WhatsApp →</a>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ================================================================
+     CONFIGURE THIS
+     whatsapp: country code + number, digits only, no + and no spaces.
+     ================================================================ */
+  var CONFIG = {
+    whatsapp: "255628802802",
+    brand:    "Imara Digital",
+    contact:  "Theo"
+  };
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  var els = {
+    rooms:$("rooms"), adr:$("adr"), occ:$("occ"), currency:$("currency"),
+    ota:$("ota"), op:$("op"),
+    otaRate:$("ota-rate"), opRate:$("op-rate"),
+    winback:$("winback"), dircost:$("dircost")
+  };
+
+  var CUR = {
+    USD:{sym:"$",      per:1,    round:5},
+    EUR:{sym:"\u20AC", per:0.92, round:5},
+    GBP:{sym:"\u00A3", per:0.79, round:5},
+    TZS:{sym:"TSh ",   per:2600, round:1000},
+    KES:{sym:"KSh ",   per:130,  round:100}
+  };
+
+  var curKey  = "USD";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function sym(){ return CUR[curKey].sym; }
+  function money(n){
+    return (n < 0 ? "\u2013" : "") + sym() + Math.round(Math.abs(n)).toLocaleString("en-US");
+  }
+  function num(n){ return Math.round(n).toLocaleString("en-US"); }
+
+  var tweens = {};
+  function setMoney(id, target){
+    var el = $(id); if (!el) return;
+    if (reduced){ el.textContent = money(target); tweens[id] = target; return; }
+    var from = (typeof tweens[id] === "number") ? tweens[id] : target;
+    tweens[id] = target;
+    var start = performance.now(), dur = 300;
+    (function step(now){
+      var t = Math.min((now - start) / dur, 1);
+      var e = 1 - Math.pow(1 - t, 3);
+      el.textContent = money(from + (target - from) * e);
+      if (t < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  var PARAMS = {
+    r:"rooms", a:"adr", o:"occ", ota:"ota", op:"op",
+    orate:"otaRate", oprate:"opRate", w:"winback", d:"dircost"
+  };
+
+  function readURL(){
+    var q = new URLSearchParams(window.location.search);
+    if (q.has("c") && CUR[q.get("c")]) { curKey = q.get("c"); els.currency.value = curKey; }
+    Object.keys(PARAMS).forEach(function(k){
+      if (q.has(k)){ var v = parseFloat(q.get(k)); if (!isNaN(v)) els[PARAMS[k]].value = v; }
+    });
+  }
+
+  var lastQuery = "", canWriteURL = true;
+
+  function writeURL(){
+    var q = new URLSearchParams();
+    q.set("c", curKey);
+    Object.keys(PARAMS).forEach(function(k){ q.set(k, els[PARAMS[k]].value); });
+    lastQuery = q.toString();
+    if (!canWriteURL) return;
+    try {
+      history.replaceState(null, "", window.location.pathname + "?" + lastQuery);
+    } catch (e) {
+      /* about:srcdoc, file:// and sandboxed iframes forbid history writes.
+         The calculator works fine without it; stop retrying. */
+      canWriteURL = false;
+    }
+  }
+
+  function shareURL(){
+    var l = window.location;
+    if (l.protocol === "http:" || l.protocol === "https:"){
+      return canWriteURL ? l.href : l.origin + l.pathname + "?" + lastQuery;
+    }
+    return null;
+  }
+
+  function balance(changed){
+    var o = +els.ota.value, p = +els.op.value;
+    if (o + p > 100){
+      if (changed === "ota"){ p = 100 - o; els.op.value = p; }
+      else { o = 100 - p; els.ota.value = o; }
+    }
+    return { ota:o/100, op:p/100, dir:(100 - o - p)/100 };
+  }
+
+  var last = {};
+
+  function render(changed){
+    var mix = balance(changed);
+
+    var rooms = Math.max(1, +els.rooms.value || 1);
+    var adr   = Math.max(0, +els.adr.value || 0);
+    var occ   = +els.occ.value / 100;
+
+    var otaRate = +els.otaRate.value / 100;
+    var opRate  = +els.opRate.value  / 100;
+    var winback = +els.winback.value / 100;
+    var dirCost = +els.dircost.value / 100;
+
+    $("sym").textContent          = sym();
+    $("occ-val").textContent      = els.occ.value + "%";
+    $("ota-val").textContent      = els.ota.value + "%";
+    $("op-val").textContent       = els.op.value + "%";
+    $("dir-val").textContent      = Math.round(mix.dir * 100) + "%";
+    $("ota-rate-val").textContent = els.otaRate.value + "%";
+    $("op-rate-val").textContent  = els.opRate.value + "%";
+    $("winback-val").textContent  = els.winback.value + "%";
+    $("dircost-val").textContent  = els.dircost.value + "%";
+
+    var nights  = rooms * 365 * occ;
+    var revenue = nights * adr;
+    var otaRev  = revenue * mix.ota;
+    var opRev   = revenue * mix.op;
+    var otaComm = otaRev * otaRate;
+    var opComm  = opRev  * opRate;
+    var total   = otaComm + opComm;
+
+    /* recoverable: only the winnable slice of OTA volume, net of the cost
+       of taking that booking yourself. Operator commission is excluded
+       on purpose — that distribution is not replaceable. */
+    var shifted     = otaRev * winback;
+    var recoverable = Math.max(0, shifted * (otaRate - dirCost));
+
+    $("o-nights").textContent = num(nights);
+    setMoney("o-rev",     revenue);
+    setMoney("o-ota",    -otaComm);
+    setMoney("o-op",     -opComm);
+    setMoney("o-total",  -total);
+    setMoney("o-recover", recoverable);
+
+    $("o-perroom").textContent =
+      money(recoverable / rooms / 12) + " per room, per month \u00B7 " +
+      money(recoverable * 3) + " over three years";
+
+    var share = { ota:mix.ota, op:mix.op, dir:mix.dir };
+    var rate  = { ota:otaRate, op:opRate, dir:dirCost };
+    ["ota","op","dir"].forEach(function(k){
+      var s = Math.max(share[k], 0.001);
+      $("col-" + k).style.flexGrow = s;
+      $("key-" + k).style.flexGrow = s;
+      $("cost-" + k).style.height  = Math.min(80, (rate[k] / 0.30) * 80) + "px";
+    });
+    $("lab-ota").textContent = "OTA " + Math.round(mix.ota * 100) + "%";
+    $("lab-op").textContent  = "Operator " + Math.round(mix.op * 100) + "%";
+    $("lab-dir").textContent = "Direct " + Math.round(mix.dir * 100) + "%";
+
+    last = {
+      rooms:rooms, adr:adr, occ:els.occ.value, mix:mix,
+      revenue:revenue, total:total, recoverable:recoverable,
+      otaRate:els.otaRate.value, opRate:els.opRate.value,
+      winback:els.winback.value, dirCost:els.dircost.value
+    };
+
+    buildWhatsApp();
+    buildPrintSummary();
+    writeURL();
+  }
+
+  function buildWhatsApp(){
+    var msg =
+      "Hi " + CONFIG.contact + " \u2014 I used the commission calculator on your site.\n\n" +
+      "My property:\n" +
+      "\u2022 " + last.rooms + " rooms\n" +
+      "\u2022 " + sym() + num(last.adr) + " average nightly rate\n" +
+      "\u2022 " + last.occ + "% occupancy\n\n" +
+      "Bookings: " + Math.round(last.mix.ota*100) + "% OTA / " +
+      Math.round(last.mix.op*100) + "% operators / " +
+      Math.round(last.mix.dir*100) + "% direct\n\n" +
+      "It says I paid about " + money(last.total) + " in commission last year, " +
+      "and roughly " + money(last.recoverable) + " a year of that is recoverable.\n\n" +
+      "Can we talk?";
+
+    $("wa-btn").setAttribute("href", "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg));
+    $("foot-wa").setAttribute("href", "https://wa.me/" + CONFIG.whatsapp);
+    $("wa-btn").querySelector("span").textContent = "Send this to " + CONFIG.contact;
+    $("foot-wa").textContent = "Talk to " + CONFIG.contact + " on WhatsApp \u2192";
+  }
+
+  function buildPrintSummary(){
+    var rows = [
+      ["Rooms", last.rooms],
+      ["Average nightly rate", sym() + num(last.adr)],
+      ["Annual occupancy", last.occ + "%"],
+      ["Channel mix", Math.round(last.mix.ota*100) + "% OTA / " +
+                      Math.round(last.mix.op*100) + "% operator / " +
+                      Math.round(last.mix.dir*100) + "% direct"],
+      ["OTA commission rate", last.otaRate + "%"],
+      ["Operator commission rate", last.opRate + "%"],
+      ["OTA bookings winnable direct", last.winback + "%"],
+      ["Cost of a direct booking", last.dirCost + "%"]
+    ];
+    $("print-summary").innerHTML = rows.map(function(r){
+      return '<div class="led-row"><span>' + r[0] + '</span><span>' + r[1] + '</span></div>';
+    }).join("");
+  }
+
+  els.currency.addEventListener("change", function(){
+    var from = CUR[curKey], to = CUR[els.currency.value];
+    var converted = (+els.adr.value || 0) / from.per * to.per;
+    els.adr.value = Math.max(1, Math.round(converted / to.round) * to.round);
+    curKey = els.currency.value;
+    render(null);
+  });
+
+  ["rooms","adr","occ","ota","op","otaRate","opRate","winback","dircost"].forEach(function(k){
+    var changed = (k === "ota") ? "ota" : (k === "op" ? "op" : null);
+    els[k].addEventListener("input",  function(){ render(changed); });
+    els[k].addEventListener("change", function(){ render(changed); });
+  });
+
+  $("btn-print").addEventListener("click", function(){ window.print(); });
+
+  $("btn-copy").addEventListener("click", function(){
+    var btn = this, url = shareURL();
+    var flash = function(msg){
+      var t = btn.getAttribute("data-label");
+      btn.textContent = msg;
+      setTimeout(function(){ btn.textContent = t; }, 1600);
+    };
+    if (!url){ flash("Needs a hosted page"); return; }
+    var done = function(){ flash("Link copied"); };
+    try {
+      if (navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(url).then(done, done);
+        return;
+      }
+    } catch (e) { /* fall through to the textarea method */ }
+    {
+      var ta = document.createElement("textarea");
+      ta.value = url; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch(e){}
+      document.body.removeChild(ta); done();
+    }
+  });
+
+  readURL();
+  curKey = els.currency.value;
+  render(null);
+})();
+</script>
+
+</body>
+</html>
