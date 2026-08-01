@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imaradigital.digital/sitemap.xml
+Sitemap: https://www.imaradigital.digital/sitemap.xml
