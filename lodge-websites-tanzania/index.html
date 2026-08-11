@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lodge Websites in Tanzania | Direct Booking Sites — Imara Digital</title>
+<meta name="description" content="We build direct-booking websites for lodges and camps in Tanzania — mobile-first, WhatsApp enquiries, live in 5 working days. Keep the 15–18% you pay OTAs.">
+<link rel="canonical" href="https://www.imaradigital.digital/lodge-websites-tanzania">
+
+<meta property="og:title" content="Lodge Websites in Tanzania — Imara Digital">
+<meta property="og:description" content="Direct-booking websites for Tanzanian lodges and camps. Mobile-first, WhatsApp enquiries, live in 5 working days.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.imaradigital.digital/lodge-websites-tanzania">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9LF4GNZZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H9LF4GNZZC');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!--
+  ================= STEP 1 — REQUIRED =================
+  Open index.html, copy EVERYTHING between <style> and </style>,
+  and paste it directly below this comment inside its own <style> tag.
+  That brings across the 'Strong' @font-face, your :root variables,
+  and all the nav / hero / btn / footer styles this page reuses.
+
+  Better long-term: cut that block out of index.html into /styles.css
+  and link it from both pages — the browser then caches the embedded
+  font once instead of re-downloading it on every page.
+  =====================================================
+-->
+
+<style>
+/* ============================================================
+   PAGE-SPECIFIC STYLES ONLY — everything else inherits from
+   your existing site CSS. All new classes are prefixed .lw-
+   so nothing here can collide with index.html.
+   ============================================================ */
+
+.lw-section{padding:6rem 5vw;position:relative;z-index:1}
+.lw-section-alt{background:var(--grey-50)}
+.lw-inner{max-width:1080px;margin:0 auto}
+.lw-eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem;display:block}
+.lw-h2{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.1;margin-bottom:1rem}
+.lw-sub{font-size:1.05rem;color:var(--grey-700);max-width:60ch;margin-bottom:1rem}
+
+/* ---- Signature: the commission split ---- */
+.lw-split{background:var(--ink);color:var(--paper);padding:5.5rem 5vw;position:relative;z-index:1}
+.lw-split .lw-h2{color:var(--paper)}
+.lw-split .lw-sub{color:var(--paper);opacity:.72}
+.lw-bar{display:flex;height:84px;border-radius:var(--radius);overflow:hidden;margin:2.4rem 0 1rem;border:1px solid rgba(255,255,255,.14)}
+.lw-bar-keep{flex:82;background:var(--blue);display:flex;align-items:center;padding:0 1.6rem}
+.lw-bar-lose{flex:18;background:#242424;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 .75rem}
+.lw-bar span{font-family:var(--font-display);font-size:1rem;line-height:1.35;color:#fff}
+.lw-barkey{display:flex;gap:1.8rem;flex-wrap:wrap;font-size:.9rem;opacity:.6;margin-bottom:2rem}
+
+/* ---- Feature grid ---- */
+.lw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(264px,1fr));gap:1.4rem;margin-top:2.6rem}
+.lw-card{background:#fff;border:1px solid var(--grey-100);border-radius:var(--radius);padding:1.8rem}
+.lw-card h3{font-family:var(--font-display);font-size:1.15rem;margin-bottom:.5rem}
+.lw-card p{font-size:.96rem;color:var(--grey-700);line-height:1.6}
+
+/* ---- Work ---- */
+.lw-work{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.6rem;margin-top:2.6rem}
+.lw-work-item{background:#fff;border:1px solid var(--grey-100);border-radius:var(--radius);overflow:hidden}
+.lw-work-item img{width:100%;height:220px;object-fit:cover;display:block;background:var(--grey-100)}
+.lw-work-body{padding:1.7rem}
+.lw-work-body h3{font-family:var(--font-display);font-size:1.3rem;margin-bottom:.3rem}
+.lw-place{font-size:.86rem;color:var(--blue);font-weight:500;margin-bottom:.7rem}
+.lw-work-body p{font-size:.96rem;color:var(--grey-700)}
+.lw-tags{margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.lw-tag{font-size:.76rem;border:1px solid var(--grey-100);border-radius:999px;padding:.25rem .7rem;color:var(--grey-500)}
+.lw-quote{margin-top:2.6rem;background:var(--blue-subtle);border-radius:var(--radius);padding:2.2rem}
+.lw-quote blockquote{font-family:var(--font-display);font-size:clamp(1.1rem,2.2vw,1.4rem);line-height:1.45;color:var(--ink)}
+.lw-quote cite{display:block;margin-top:.9rem;font-style:normal;font-size:.9rem;color:var(--grey-500)}
+
+/* ---- Steps ---- */
+.lw-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(246px,1fr));gap:1.8rem;margin-top:2.6rem}
+.lw-step{border-top:2px solid var(--blue);padding-top:1.2rem}
+.lw-step-n{font-family:var(--font-display);font-size:.8rem;letter-spacing:.1em;color:var(--blue);margin-bottom:.5rem}
+.lw-step h3{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.4rem}
+.lw-step p{font-size:.96rem;color:var(--grey-700)}
+.lw-step-time{display:inline-block;margin-top:.7rem;font-size:.82rem;color:var(--blue);background:var(--blue-subtle);padding:.25rem .75rem;border-radius:999px}
+
+/* ---- Consultation block (replaces pricing) ---- */
+.lw-consult{background:#fff;border:1px solid var(--grey-100);border-radius:var(--radius);padding:2.6rem;max-width:660px;margin-top:2rem}
+.lw-consult h3{font-family:var(--font-display);font-size:1.35rem;margin-bottom:.4rem}
+.lw-consult .lw-intro{color:var(--grey-700);font-size:.98rem}
+.lw-consult .lw-after{margin-top:1rem;font-size:.88rem;color:var(--grey-500)}
+.lw-list{list-style:none;margin:1.4rem 0 1.8rem;padding:0}
+.lw-list li{padding-left:1.7rem;position:relative;margin-bottom:.65rem;font-size:.98rem;color:var(--grey-700)}
+.lw-list li::before{content:"";position:absolute;left:0;top:.55rem;width:10px;height:10px;border-radius:3px;background:var(--blue)}
+
+/* ---- FAQ ---- */
+.lw-faq{margin-top:2.2rem;max-width:760px}
+.lw-faq details{border-bottom:1px solid var(--grey-100);padding:1.3rem 0}
+.lw-faq summary{font-family:var(--font-display);font-size:1.08rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
+.lw-faq summary::-webkit-details-marker{display:none}
+.lw-faq summary::after{content:"+";color:var(--blue);font-size:1.5rem;line-height:1;flex-shrink:0}
+.lw-faq details[open] summary::after{content:"–"}
+.lw-faq details p{margin-top:.7rem;font-size:.97rem;color:var(--grey-700)}
+
+/* ---- Final ---- */
+.lw-final{background:var(--ink);color:var(--paper);text-align:center;padding:6rem 5vw;position:relative;z-index:1}
+.lw-final .lw-h2{color:var(--paper);max-width:20ch;margin:0 auto 1rem}
+.lw-final .lw-sub{color:var(--paper);opacity:.72;max-width:52ch;margin:0 auto 2rem}
+.lw-final .lw-fineprint{font-size:.88rem;color:var(--paper);opacity:.5;margin-top:1.2rem}
+
+/* ---- Work links ---- */
+.lw-visit{margin-top:1rem}
+.lw-visit a{color:var(--blue);text-decoration:none}
+.lw-visit a:hover{text-decoration:underline}
+
+@media (max-width:640px){
+  .lw-section,.lw-split,.lw-final{padding-left:6vw;padding-right:6vw}
+  .lw-bar{height:auto;flex-direction:column}
+  .lw-bar-keep,.lw-bar-lose{padding:1.1rem 1.3rem;justify-content:flex-start;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="cursor-glow" id="glow"></div>
+
+<!-- STEP 2: paste your logo data URI into both [LOGO_DATA_URI] slots (nav + footer) -->
+<nav id="nav">
+  <a href="/" class="nav-logo"><img src="[LOGO_DATA_URI]" alt="Imara Digital"></a>
+  <div class="nav-links">
+    <a href="/#solution">What we build</a>
+    <a href="/#process">How it works</a>
+    <a href="/#work">Our work</a>
+    <a href="/calc">Calculator</a>
+    <a href="https://wa.me/255628802802" class="nav-cta">Talk to us</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-tag"><span class="pulse"></span> Lodge websites &middot; Tanzania &amp; Zanzibar</div>
+  <h1>Lodge websites built for <span class="highlight">direct bookings.</span></h1>
+  <p class="hero-sub">Your guests already found you. A booking page of your own means they book with you — not through a platform taking 15–18% of every night they stay.</p>
+  <div class="hero-actions">
+    <a href="https://wa.me/255628802802?text=Hi%20Imara%20Digital%2C%20I%27d%20like%20a%20booking%20website%20for%20my%20lodge." class="btn-main">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Message on WhatsApp
+    </a>
+    <a href="/calc" class="btn-outline">
+      Work out what OTAs cost you
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE: THE SPLIT ============ -->
+<section class="lw-split">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">The maths</span>
+    <h2 class="lw-h2">Every OTA booking is split before it reaches you.</h2>
+    <p class="lw-sub">On a $100 room night, here is where the money actually goes.</p>
+    <div class="lw-bar" role="img" aria-label="Bar showing 82 to 85 dollars kept by the lodge and 15 to 18 dollars taken as OTA commission on a 100 dollar room night">
+      <div class="lw-bar-keep"><span>$82–85 &nbsp;&middot;&nbsp; you keep</span></div>
+      <div class="lw-bar-lose"><span>$15–18<br>commission</span></div>
+    </div>
+    <div class="lw-barkey">
+      <span>Booking.com, Expedia and similar platforms</span>
+      <span>Guest details stay with the platform</span>
+    </div>
+    <a href="/calc" class="btn-main">Calculate your own number</a>
+  </div>
+</section>
+
+<!-- ============ WHAT WE BUILD ============ -->
+<section class="lw-section">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">What we build</span>
+    <h2 class="lw-h2">A booking page built around how guests actually reach you.</h2>
+    <p class="lw-sub">Not a brochure site. Every part of it moves a visitor toward one action — enquiring with you directly.</p>
+    <div class="lw-grid">
+      <article class="lw-card">
+        <h3>WhatsApp-first enquiries</h3>
+        <p>Guests tap once and they are talking to you. No forms abandoned halfway, no emails that never get sent.</p>
+      </article>
+      <article class="lw-card">
+        <h3>Rooms, rates and real photos</h3>
+        <p>Every room type shown clearly, with photographs that make a guest want to stay there.</p>
+      </article>
+      <article class="lw-card">
+        <h3>Fast on a phone, anywhere</h3>
+        <p>Built to load quickly on Tanzanian mobile data — which is how most of your guests will find you.</p>
+      </article>
+      <article class="lw-card">
+        <h3>Safari and season context</h3>
+        <p>Park proximity, migration timing, transfer options — the details international guests decide on.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="lw-section lw-section-alt">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">Our work</span>
+    <h2 class="lw-h2">Real lodges, taking direct bookings.</h2>
+    <div class="lw-work">
+      <article class="lw-work-item">
+        <!-- STEP 3: point these at the same image paths index.html uses -->
+        <img src="/images/ol-oret.jpg" alt="Ol Oret safari lodge collection website built by Imara Digital, covering Serengeti, Arusha and Lake Manyara">
+        <div class="lw-work-body">
+          <h3>Ol Oret — The Rooted Path</h3>
+          <p class="lw-place">Serengeti &middot; Arusha &middot; Lake Manyara</p>
+          <p>Three lodges under one identity, with a single enquiry form that routes each guest to the right destination.</p>
+          <div class="lw-tags"><span class="lw-tag">Multi-property</span><span class="lw-tag">Direct enquiry</span><span class="lw-tag">Mobile-first</span></div>
+          <p class="lw-visit"><a href="https://www.oloret.co.tz">Visit oloret.co.tz &rarr;</a></p>
+        </div>
+      </article>
+      <article class="lw-work-item">
+        <img src="/images/two-mountains.jpg" alt="Two Mountains Lodge direct booking website built by Imara Digital in Arusha, Tanzania">
+        <div class="lw-work-body">
+          <h3>Two Mountains Lodge</h3>
+          <p class="lw-place">Arusha, Tanzania</p>
+          <p>A direct booking system with WhatsApp enquiries — guest interest now lands with the lodge instead of a platform.</p>
+          <div class="lw-tags"><span class="lw-tag">WhatsApp booking</span><span class="lw-tag">Mobile-first</span></div>
+          <p class="lw-visit"><a href="https://www.twomountainslodge.co.tz">Visit twomountainslodge.co.tz &rarr;</a></p>
+        </div>
+      </article>
+    </div>
+    <div class="lw-quote">
+      <blockquote>&ldquo;Imara Digital helped us save hundreds we would be paying to Booking.com and TripAdvisor. Honestly one of the best decisions, working with them.&rdquo;</blockquote>
+      <cite>&mdash; Directors, Two Mountains Lodge</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="lw-section">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">How it works</span>
+    <h2 class="lw-h2">From first message to a live booking page in five days.</h2>
+    <div class="lw-steps">
+      <div class="lw-step">
+        <div class="lw-step-n">STEP 01</div>
+        <h3>We talk</h3>
+        <p>A short call about your property, your rooms, and where your guests come from now.</p>
+        <span class="lw-step-time">15 minutes</span>
+      </div>
+      <div class="lw-step">
+        <div class="lw-step-n">STEP 02</div>
+        <h3>We build</h3>
+        <p>You send photos and room details. We build the page, then refine it with you until it is right.</p>
+        <span class="lw-step-time">5 working days</span>
+      </div>
+      <div class="lw-step">
+        <div class="lw-step-n">STEP 03</div>
+        <h3>You keep more</h3>
+        <p>Enquiries arrive on your WhatsApp. Every direct booking is a commission you no longer pay.</p>
+        <span class="lw-step-time">From launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULTATION (replaces pricing) ============ -->
+<section class="lw-section lw-section-alt">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">Getting started</span>
+    <h2 class="lw-h2">Every lodge is different, so we quote every lodge differently.</h2>
+    <p class="lw-sub">A four-room camp and a thirty-room lodge do not need the same thing. Tell us about your property on a 15-minute call and we will give you a clear, fixed number — no packages, no surprises later.</p>
+    <div class="lw-consult">
+      <h3>Book a 15-minute call</h3>
+      <p class="lw-intro">On the call we will cover:</p>
+      <ul class="lw-list">
+        <li>Where your bookings come from today, and what they cost you</li>
+        <li>What your booking page would need to include</li>
+        <li>A fixed price and a delivery date, in writing</li>
+      </ul>
+      <a href="https://wa.me/255628802802?text=Hi%20Imara%20Digital%2C%20I%27d%20like%20to%20book%20a%2015-minute%20call%20about%20a%20booking%20website%20for%20my%20lodge." class="btn-main">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Book the call on WhatsApp
+      </a>
+      <p class="lw-after">No commitment. We reply within hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="lw-section">
+  <div class="lw-inner">
+    <span class="lw-eyebrow">Questions</span>
+    <h2 class="lw-h2">What lodge owners ask us.</h2>
+    <div class="lw-faq">
+      <details>
+        <summary>Do I have to leave Booking.com?</summary>
+        <p>No. Keep every platform you are on. A direct booking page runs alongside them and catches the guests who look you up by name before booking — which is most of them. You pay commission on fewer nights, not on none.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Five working days from the point we have your photos and room details. The photos are usually what decides the timeline.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>It depends on the size of your property and how many room types you need to show. Book a 15-minute call and we will give you a fixed price the same day — one number, in writing, with a delivery date.</p>
+      </details>
+      <details>
+        <summary>What if I do not have good photos?</summary>
+        <p>Send what you have. We will tell you honestly which rooms need reshooting and what to photograph — often a phone in good morning light is enough to start.</p>
+      </details>
+      <details>
+        <summary>Can I update it myself later?</summary>
+        <p>Yes. We show you how to change rates and text. For bigger changes, send a WhatsApp message and we will handle it.</p>
+      </details>
+      <details>
+        <summary>Do you work with small lodges?</summary>
+        <p>Most of our work is with owner-run properties. If you have four rooms, the commission you are paying still adds up to real money over a season.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="lw-final">
+  <div class="lw-inner">
+    <h2 class="lw-h2">Every season without direct bookings costs you a room.</h2>
+    <p class="lw-sub">Send us a message and we will show you what your booking page would look like.</p>
+    <a href="https://wa.me/255628802802?text=Hi%20Imara%20Digital%2C%20I%27d%20like%20to%20see%20what%20a%20booking%20page%20would%20look%20like%20for%20my%20lodge." class="btn-main">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      Message on WhatsApp
+    </a>
+    <p class="lw-fineprint">Free consultation &middot; We reply within hours</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><img src="[LOGO_DATA_URI]" alt="Imara Digital"></div>
+  <p>&copy; 2026 Imara Digital &middot; Direct booking systems for Tanzania's hospitality industry</p>
+</footer>
+
+<script>
+  // Nav scroll state — matches index.html
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  // Cursor glow — matches index.html
+  var glow = document.getElementById('glow');
+  if (glow && window.matchMedia('(pointer:fine)').matches) {
+    window.addEventListener('mousemove', function (e) {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+  }
+</script>
+
+<!-- ============ SCHEMA ============ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Imara Digital",
+  "description":"Direct-booking websites for lodges, camps and hotels in Tanzania and Zanzibar.",
+  "url":"https://www.imaradigital.digital/lodge-websites-tanzania",
+  "telephone":"+255628802802",
+  "email":"imaradigital.co@gmail.com",
+  "areaServed":[{"@type":"Country","name":"Tanzania"},{"@type":"Place","name":"Zanzibar"}],
+  "address":{"@type":"PostalAddress","addressLocality":"Arusha","addressCountry":"TZ"},
+  "serviceType":"Lodge and hotel website design"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Do I have to leave Booking.com?","acceptedAnswer":{"@type":"Answer","text":"No. Keep every platform you are on. A direct booking page runs alongside them and catches the guests who look you up by name before booking, so you pay commission on fewer nights."}},
+    {"@type":"Question","name":"How long does a lodge website take to build?","acceptedAnswer":{"@type":"Answer","text":"Five working days from the point we have your photos and room details."}},
+    {"@type":"Question","name":"What does a lodge website cost in Tanzania?","acceptedAnswer":{"@type":"Answer","text":"It depends on the size of the property and the number of room types. Book a 15-minute call and we provide a fixed price the same day, in writing, with a delivery date."}},
+    {"@type":"Question","name":"What if I do not have good photos?","acceptedAnswer":{"@type":"Answer","text":"Send what you have. We advise which rooms need reshooting and what to photograph."}},
+    {"@type":"Question","name":"Can I update the website myself later?","acceptedAnswer":{"@type":"Answer","text":"Yes. We show you how to change rates and text, and handle bigger changes over WhatsApp."}},
+    {"@type":"Question","name":"Do you work with small lodges?","acceptedAnswer":{"@type":"Answer","text":"Most of our work is with owner-run properties. Even a four-room lodge pays meaningful commission over a season."}}
+  ]
+}
+</script>
+
+</body>
+</html>
