@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imara Digital — Direct Bookings for Tanzania & Zanzibar</title>
 <meta name="description" content="We build direct-booking systems for lodges and hotels in Tanzania — so guests enquire and book through your business, not through OTAs.">
+<link rel="canonical" href="https://www.imaradigital.digital/">
 <meta property="og:title" content="Imara Digital — Direct Bookings for Tanzania">
 <meta property="og:description" content="Stop paying 15-18% commission on guests who already found you. We build direct-booking systems for lodges and hotels in Tanzania.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://imaradigital.digital">
+<meta property="og:url" content="https://www.imaradigital.digital">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9LF4GNZZC"></script>
 <script>
@@ -806,11 +807,103 @@
     .process-step:last-child { border-bottom: none; }
     .portfolio-item { grid-template-columns: 1fr; gap: 2rem; }
     .process-section { margin: 0; border-radius: 0; }
-    .nav-links a:not(.nav-cta) { display: none; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
     .chat-window { right: 1rem; left: 1rem; width: auto; bottom: 5.5rem; }
     .chat-fab { bottom: 1.2rem; right: 1.2rem; width: 54px; height: 54px; }
   }
+
+  /* ===== Mobile navigation ===== */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 102;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.32s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu { display: none; }
+  .menu-scrim { display: none; }
+
+  @media (max-width: 900px) {
+    .nav-toggle { display: flex; }
+    .nav-links { display: none; }
+
+    .mobile-menu {
+      display: block;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 101;
+      padding: 5.25rem 6vw 2.25rem;
+      background: rgba(250, 250, 250, 0.97);
+      backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid var(--grey-100);
+      transform: translateY(-101%);
+      transition: transform 0.38s cubic-bezier(.4,0,.2,1);
+    }
+    .mobile-menu.open { transform: translateY(0); }
+
+    .mobile-menu a {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      line-height: 1.2;
+      color: var(--ink);
+      text-decoration: none;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--grey-100);
+    }
+    .mobile-menu a:last-of-type { border-bottom: none; }
+
+    .mobile-menu .mobile-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem;
+      font-size: 1.05rem;
+      color: #fff;
+      background: var(--ink);
+      border-radius: 100px;
+      border-bottom: none;
+    }
+
+    .menu-scrim {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.35);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .menu-scrim.open { opacity: 1; }
+    .menu-scrim[hidden] { display: none; }
+
+    body.menu-open { overflow: hidden; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-menu, .menu-scrim, .nav-toggle span { transition: none !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -823,10 +916,27 @@
     <a href="#solution">What we build</a>
     <a href="#process">How it works</a>
     <a href="#work">Our work</a>
+    <a href="/lodge-websites-tanzania">Lodges</a>
     <a href="/calc">Calculator</a>
     <a href="https://wa.me/255628802802" class="nav-cta">Talk to us</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="menu-scrim" id="menuScrim" hidden></div>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#solution">What we build</a>
+  <a href="#process">How it works</a>
+  <a href="#work">Our work</a>
+  <a href="/lodge-websites-tanzania">Lodge websites</a>
+  <a href="/calc">Commission calculator</a>
+  <a href="https://wa.me/255628802802?text=Hi%20Imara%20Digital%2C%20I%27m%20interested%20in%20a%20direct%20booking%20system%20for%20my%20property." class="mobile-cta">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    Talk to us
+  </a>
+</div>
 
 <section class="hero">
   <div class="hero-tag"><span class="pulse"></span> Direct bookings for Tanzania & Zanzibar</div>
@@ -935,6 +1045,7 @@
   <div class="reveal">
     <p class="section-label">Our work</p>
     <h2 class="section-heading" style="margin-bottom: 1rem;">Real lodges. Real direct bookings.</h2>
+    <p style="margin-bottom:1rem;"><a href="/lodge-websites-tanzania" style="color:var(--blue);text-decoration:none;font-weight:500;">See how we build lodge booking websites in Tanzania &rarr;</a></p>
   </div>
   <div class="portfolio-item reveal">
     <div class="portfolio-visual">
@@ -1106,6 +1217,41 @@
     }
     isTyping=false;chatSend.disabled=false;chatInput.focus();
   }
+</script>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var menu   = document.getElementById('mobileMenu');
+  var scrim  = document.getElementById('menuScrim');
+  if (!toggle || !menu || !scrim) return;
+
+  function openMenu() {
+    scrim.hidden = false;
+    requestAnimationFrame(function () { scrim.classList.add('open'); });
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    document.body.classList.add('menu-open');
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    scrim.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('menu-open');
+    setTimeout(function () { scrim.hidden = true; }, 300);
+  }
+  function isOpen() { return toggle.getAttribute('aria-expanded') === 'true'; }
+
+  toggle.addEventListener('click', function () { isOpen() ? closeMenu() : openMenu(); });
+  scrim.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && isOpen()) closeMenu(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 900 && isOpen()) closeMenu(); });
+})();
 </script>
 </body>
 </html>
