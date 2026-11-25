@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Ole Itiko Cottages · Preview by Imara Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;700&family=Alegreya+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clove:#24301F; --clove-2:#435238; --bud:#A6612A; --saffron:#D9A441; --saffron-soft:#F3E7C8;
+    --leaf:#5E7A3A; --paper:#F8F5EC; --oat:#EEE9DA; --line:#DEDAC6; --muted:#5F6455; --wa:#25D366;
+    --slab:"Alegreya", Georgia, serif; --sans:"Alegreya Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-size:17px;font-family:var(--sans);background:var(--paper);color:var(--clove);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:var(--slab);font-weight:700;line-height:1.08}
+  h2{font-size:clamp(30px,5vw,44px);margin:8px 0 14px}
+  .eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bud);font-weight:700}
+  .lede{font-size:17.5px;color:var(--muted);max-width:620px}
+  section{padding:72px 0}
+  .preview{background:#071735;color:#DCE3F0;font-size:12.5px;text-align:center;padding:8px 14px}
+  .preview b{color:#fff}
+  nav{position:sticky;top:0;z-index:20;background:rgba(248,245,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:var(--slab);font-size:23px;font-weight:700;text-decoration:none}
+  .logo small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bud);font-weight:700;margin-top:-3px}
+  .nav-links{display:flex;gap:24px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:14.5px;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;text-decoration:none;border-radius:10px;padding:14px 22px;border:0;cursor:pointer;font-family:var(--sans)}
+  .btn svg{width:19px;height:19px}
+  .btn-wa{background:var(--wa);color:#06261A}
+  .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45)}
+  .nav-links .btn{padding:9px 15px;font-size:13.5px;color:#06261A}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
+
+  .hero{position:relative;min-height:600px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+  .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+  .hero .wrap{position:relative;padding-bottom:56px;padding-top:120px;width:100%}
+  .hero .eyebrow{color:var(--saffron-soft)}
+  .hero h1{font-size:clamp(40px,7.5vw,72px);margin:10px 0 14px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+  .hero p{font-size:18.5px;max-width:560px;color:#F1EEDD}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  .photo{border-radius:16px;background:linear-gradient(135deg,#E8E6D4,#D5D2B9);display:grid;place-items:center;color:var(--clove-2);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;position:relative;overflow:hidden}
+  .photo:after{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(36,48,31,.28);border-radius:10px}
+  .photo span{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:0 20px}
+  .photo svg{width:30px;height:30px;opacity:.7}
+
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .about .photo{aspect-ratio:4/3.4}
+  .ticks{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+  .ticks li{position:relative;padding-left:26px;font-size:15.5px}
+  .ticks li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--saffron)}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+  @media(max-width:520px){.ticks{grid-template-columns:1fr}}
+
+  .stay{background:var(--oat)}
+  .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+  .card{background:var(--paper);border-radius:16px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+  .card .photo{aspect-ratio:16/10;border-radius:0}
+  .card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .card .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .card h3{font-size:26px}
+  .card .rate{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .card .rate small{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}
+  .card p{font-size:15px;color:var(--muted);margin:8px 0 16px;flex:1}
+  .card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .card .meta span{font-size:12.5px;background:var(--oat);border-radius:6px;padding:4px 10px;color:var(--clove-2)}
+  .card .btn{padding:12px 16px;font-size:14px;background:var(--clove);color:#fff}
+  .note{margin-top:18px;font-size:14.5px;color:var(--muted)}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  .groups{background:var(--clove);color:var(--oat)}
+  .groups .eyebrow{color:var(--saffron)}
+  .groups h2{color:#fff}
+  .groups .lede{color:#D3D8C3}
+  .gsplit{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+  .steps{list-style:none;counter-reset:s;border-top:1px solid rgba(255,255,255,.18)}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .steps li:before{content:"0" counter(s);font-family:var(--slab);font-size:20px;color:var(--saffron);font-weight:600}
+  .steps b{display:block;color:#fff;font-size:17px}
+  .steps span{font-size:15px;color:#D3D8C3}
+  .groups .btn{margin-top:24px}
+  .groups .photo{aspect-ratio:4/3;background:linear-gradient(135deg,#34422C,#46573A);color:#DCE2CB}
+  .groups .photo:after{border-color:rgba(255,255,255,.3)}
+  .seg3{grid-template-columns:1fr 1fr}
+  @media(max-width:860px){.gsplit{grid-template-columns:1fr;gap:26px}}
+
+  .near{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;border-top:2px solid var(--clove)}
+  .near div{padding:20px 20px 0 0}
+  .near .n{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .near h3{font-size:21px;margin:4px 0 6px}
+  .near p{font-size:14.5px;color:var(--muted)}
+  @media(max-width:860px){.near{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.near{grid-template-columns:1fr}.near div{padding:18px 0;border-bottom:1px solid var(--line)}}
+
+  .pay{background:var(--saffron-soft)}
+  .pay .wrap{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+  .mpesa{width:84px;height:84px;border-radius:20px;background:#fff;display:grid;place-items:center;font-family:var(--slab);font-weight:700;color:var(--leaf);font-size:15px;text-align:center;line-height:1.05;box-shadow:0 10px 24px -14px rgba(36,48,31,.5)}
+  .pay h2{font-size:clamp(26px,4vw,34px);margin:0 0 6px}
+  .pay p{color:var(--clove-2);max-width:640px}
+  .pay section{padding:40px 0}
+  @media(max-width:560px){.pay .wrap{grid-template-columns:1fr}}
+
+  .enquire{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
+  form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 24px 50px -36px rgba(36,48,31,.5)}
+  .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .row > div, .enquire > *{min-width:0}
+  label{display:block;font-size:13px;font-weight:700;color:var(--clove-2);margin:14px 0 6px}
+  input,select{width:100%;min-width:0;max-width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--clove)}
+  .seg{display:grid;grid-template-columns:1fr 1fr;background:var(--oat);border-radius:10px;padding:4px;gap:4px}
+  .seg input{display:none}
+  .seg label{margin:0;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500}
+  .seg input:checked + label{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);font-weight:700}
+  form .btn{width:100%;margin-top:20px;font-size:16px;padding:16px}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center}
+  @media(max-width:860px){.enquire{grid-template-columns:1fr;gap:26px}}
+
+  footer{background:#1A2316;color:#B7BCA8;padding:40px 0 90px;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}
+  footer .logo{color:#fff}
+  footer a{color:#F2E3D6;text-decoration:none}
+  .built{margin-top:18px;font-size:12px;color:#848A74}
+  .float{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+  .float svg{width:30px;height:30px}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9LF4GNZZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H9LF4GNZZC', {page_title: 'Preview - Ole Itiko'});
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a,button'); if(!a) return;
+    gtag('event', 'preview_click', {preview: 'oleitiko', button: (a.textContent||'').trim().slice(0,40)});
+  });
+</script>
+</head>
+<body>
+<div class="preview"><b>Preview by Imara Digital</b> · a mockup for Ole Itiko Cottages, not the live site. Photos, details and rates are placeholders.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Ole Itiko<small>Cottages · Lake Naivasha</small></a>
+    <div class="nav-links">
+      <a href="#stay">Cottages</a>
+      <a href="#pets">Pets welcome</a>
+      <a href="#near">Getting here</a>
+      <a class="btn btn-wa" href="#enquire">Check dates</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#40506A"/><stop offset=".45" stop-color="#C98A5B"/><stop offset=".8" stop-color="#EDC07A"/><stop offset="1" stop-color="#F3D7A0"/></linearGradient>
+      <linearGradient id="wh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7B979"/><stop offset="1" stop-color="#8E7A55"/></linearGradient>
+      <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".2" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#1A2316" stop-opacity=".9"/></linearGradient>
+    </defs>
+    <rect width="1440" height="800" fill="url(#sky)"/>
+    <circle cx="1060" cy="330" r="52" fill="#FBE3B2" opacity=".95"/>
+    <path d="M0 520 L220 500 L420 470 L560 488 L760 450 L900 470 L1100 440 L1300 470 L1440 460 L1440 600 L0 600Z" fill="#6C6A57" opacity=".55"/>
+    <path d="M0 560 C300 548 620 566 900 552 C1150 540 1300 556 1440 550 L1440 800 L0 800Z" fill="#3C4630"/>
+    <ellipse cx="900" cy="640" rx="300" ry="34" fill="url(#wh)" opacity=".9"/>
+    <g fill="#1E2618">
+      <path d="M1180 600 L1186 470 L1194 470 L1200 600Z"/>
+      <path d="M1060 478 C1110 452 1270 450 1330 476 C1270 486 1120 488 1060 478Z"/>
+      <path d="M1100 458 C1140 440 1230 440 1270 456 C1230 462 1140 464 1100 458Z"/>
+      <path d="M150 610 L155 500 L162 500 L167 610Z"/>
+      <path d="M60 506 C110 486 210 486 260 504 C210 512 110 514 60 506Z"/>
+      <rect x="560" y="566" width="110" height="52"/><path d="M548 570 L615 530 L682 570Z"/>
+      <rect x="640" y="590" width="10" height="22" fill="#E8B66A"/>
+      <path d="M1000 610 l6 -40 l4 0 l2 18 l14 -4 l2 26Z"/>
+      <path d="M990 572 l8 -26 l3 0 l-4 28Z"/>
+    </g>
+    <rect width="1440" height="800" fill="url(#shade)"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Kongoni Wildlife Sanctuary · Naivasha</p>
+    <h1>Ole Itiko Cottages</h1>
+    <p>Self-catering cottages around a water hole, in quiet acacia woodland off the South Lake Road. About an hour and a half from Nairobi, and a world away.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="#enquire"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Check dates on WhatsApp</a>
+      <a class="btn btn-light" href="#stay">See the cottages</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">Karibu Ole Itiko</p>
+      <h2>Wake up to the water hole.</h2>
+      <p class="lede">Ole Itiko sits in Kinja Estate, between Hippo Point and Mundui, in a sheltered patch of acacia woodland. Bring the family, cook your own meals, light the fire in the evening and watch who comes down to drink.</p>
+      <ul class="ticks">
+        <li>Five self-catering cottages</li>
+        <li>Fully fitted kitchens</li>
+        <li>Fireplace in the family cottage</li>
+        <li>Pets welcome</li>
+        <li>Barbecue on request</li>
+        <li>Resident rates in KES</li>
+      </ul>
+    </div>
+    <div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Water hole photo</span></div>
+  </div>
+</section>
+
+<section class="stay" id="stay">
+  <div class="wrap">
+    <p class="eyebrow">The cottages</p>
+    <h2>Choose your cottage</h2>
+    <p class="lede">From a cosy studio to a cottage for the whole family. Real photos and resident rates go here, so guests know exactly what they're booking.</p>
+    <div class="cards"><div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Cottage photo</span></div><div class="body"><div class="top"><h3>The Family Cottage</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>Two rooms that sleep 6 to 8, a full kitchen, a dining room, and a lounge with a fireplace and DSTV for cool Naivasha evenings.</p><div class="meta"><span>Sleeps 6–8</span><span>Fireplace</span><span>Kitchen</span></div><a class="btn" href="#enquire">Ask about this cottage</a></div></div><div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Cottage photo</span></div><div class="body"><div class="top"><h3>Cottages One &amp; Two</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>Self-catering cottages with their own kitchen and verandah, looking out over the woodland. Your own description goes here.</p><div class="meta"><span>Self-catering</span><span>Verandah</span><span>Garden</span></div><a class="btn" href="#enquire">Ask about this cottage</a></div></div><div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Cottage photo</span></div><div class="body"><div class="top"><h3>The Apartments</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>Two-bedroom units in a modern, rustic block. Easy for two couples or a small family. Your own description goes here.</p><div class="meta"><span>2 bedrooms</span><span>Self-catering</span><span>Parking</span></div><a class="btn" href="#enquire">Ask about this cottage</a></div></div><div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Cottage photo</span></div><div class="body"><div class="top"><h3>Swara Annex</h3><span class="rate">From KES 9,000 <small>/ night</small></span></div><p>A cosy studio with two beds, perfect for a couple or a solo escape from Nairobi. No kitchen, just rest.</p><div class="meta"><span>Studio</span><span>2 beds</span><span>Quiet</span></div><a class="btn" href="#enquire">Ask about this cottage</a></div></div></div>
+  </div>
+</section>
+
+<section class="groups" id="pets">
+  <div class="wrap gsplit">
+    <div>
+      <p class="eyebrow">Pets welcome</p>
+      <h2>Bring the dog.</h2>
+      <p class="lede">Plenty of places say no to pets. At Ole Itiko, your cat or dog is welcome too, so the whole family gets the weekend away. Just let us know when you book.</p>
+      <a class="btn btn-wa" href="#enquire" onclick="document.getElementById('pt2').checked=true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Book with your pet</a>
+    </div>
+    <div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Garden photo</span></div>
+  </div>
+</section>
+
+<section id="near">
+  <div class="wrap">
+    <p class="eyebrow">Getting here</p>
+    <h2>Kongoni, South Lake Road</h2>
+    <p class="lede">Past the Oserian flower farms, inside the Kongoni Wildlife Sanctuary.</p>
+    <div class="near">
+      <div><span class="n">About 1.5 hrs</span><h3>From Nairobi</h3><p>An easy drive for a weekend away.</p></div>
+      <div><span class="n">7 km</span><h3>Naivasha Airstrip</h3><p>For guests flying in.</p></div>
+      <div><span class="n">Nearby</span><h3>Lake Naivasha</h3><p>Boat rides, hippos and birdlife.</p></div>
+      <div><span class="n">Nearby</span><h3>Crescent Island</h3><p>Walk among giraffe and zebra.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="pay"><section><div class="wrap">
+  <div class="mpesa">M-PESA</div>
+  <div><h2>Book with us, pay by M-Pesa</h2><p>Confirm your dates with us on WhatsApp, then pay by M-Pesa <b>[Till or Paybill]</b>. Resident rates, no booking fees, and you deal with us directly.</p></div>
+</div></section></div>
+
+<section id="enquire">
+  <div class="wrap enquire">
+    <div>
+      <p class="eyebrow">Book direct</p>
+      <h2>Check your dates</h2>
+      <p class="lede">Tell us when you're coming. Your request opens in WhatsApp with everything filled in, and we'll reply directly.</p>
+    </div>
+    <form id="f">
+      <div class="row">
+        <div><label for="in">Arrive</label><input id="in" type="date" required></div>
+        <div><label for="out">Leave</label><input id="out" type="date" required></div>
+      </div>
+      <div class="row">
+        <div><label for="gu">Adults</label><select id="gu"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+        <div><label for="ap">Children</label><select id="ap"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+      </div>
+      <label for="ct">Cottage</label>
+      <select id="ct"><option>The Family Cottage</option><option>Cottage One or Two</option><option>An Apartment</option><option>Swara Annex</option><option>Not sure yet</option></select>
+      <label>Bringing a pet?</label>
+      <div class="seg">
+        <input type="radio" name="why" id="pt1" value="No" checked><label for="pt1">No</label>
+        <input type="radio" name="why" id="pt2" value="Yes"><label for="pt2">Yes</label>
+      </div>
+      <label for="nm">Your name</label><input id="nm" type="text" placeholder="Name">
+      <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Send on WhatsApp</button>
+      <p class="small">No booking fees. You confirm everything directly with us.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top">Ole Itiko<small>Cottages · Lake Naivasha</small></a><p style="margin-top:12px">Kinja Estate, Kongoni Wildlife Sanctuary, South Lake Road, Naivasha</p></div>
+    <div><p><a href="#enquire">WhatsApp us</a></p></div>
+  </div>
+  <div class="wrap"><p class="built">Website preview by <a href="https://www.imaradigital.digital/" style="color:#E3C27A">Imara Digital</a></p></div>
+</footer>
+
+<a class="float" href="#enquire" aria-label="Check dates on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg></a>
+
+<script>
+  var WHATSAPP = "254723161436";
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(id){ return document.getElementById(id).value; };
+    var why = document.querySelector('input[name=why]:checked').value;
+    var msg = "Hello Ole Itiko! I'd like to check availability.\n" +
+      "Dates: " + g('in') + " to " + g('out') + "\n" +
+      "Adults: " + g('gu') + ", children: " + g('ap') + "\n" + "Cottage: " + g('ct') + "\n" +
+      "Bringing a pet: " + why + (g('nm') ? "\nName: " + g('nm') : "");
+    if(window.gtag) gtag('event','preview_form_sent',{preview:'oleitiko'});
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank");
+  });
+  var fl=document.querySelector('.float');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){fl.style.display=es[0].isIntersecting?'none':'grid';},{threshold:.15}).observe(document.getElementById('enquire'));}
+</script>
+</body>
+</html>
