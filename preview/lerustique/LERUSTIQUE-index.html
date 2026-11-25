@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Rustique Nanyuki · Preview by Imara Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clove:#2E1F1A; --clove-2:#5B3A2E; --bud:#A8432A; --saffron:#C9A24A; --saffron-soft:#F2E6CC;
+    --leaf:#6B7A45; --paper:#FBF7F0; --oat:#F1E8DA; --line:#E3D6C3; --muted:#6A5C53; --wa:#25D366;
+    --slab:"Rufina", Georgia, serif; --sans:"Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--clove);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:var(--slab);font-weight:700;line-height:1.08}
+  h2{font-size:clamp(30px,5vw,44px);margin:8px 0 14px}
+  .eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bud);font-weight:700}
+  .lede{font-size:17.5px;color:var(--muted);max-width:620px}
+  section{padding:72px 0}
+  .preview{background:#071735;color:#DCE3F0;font-size:12.5px;text-align:center;padding:8px 14px}
+  .preview b{color:#fff}
+  nav{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:var(--slab);font-size:23px;font-weight:700;text-decoration:none}
+  .logo small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bud);font-weight:700;margin-top:-3px}
+  .nav-links{display:flex;gap:24px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:14.5px;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;text-decoration:none;border-radius:10px;padding:14px 22px;border:0;cursor:pointer;font-family:var(--sans)}
+  .btn svg{width:19px;height:19px}
+  .btn-wa{background:var(--wa);color:#06261A}
+  .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45)}
+  .nav-links .btn{padding:9px 15px;font-size:13.5px;color:#06261A}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
+
+  .hero{position:relative;min-height:600px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+  .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+  .hero .wrap{position:relative;padding-bottom:56px;padding-top:120px;width:100%}
+  .hero .eyebrow{color:var(--saffron-soft)}
+  .hero h1{font-size:clamp(40px,7.5vw,72px);margin:10px 0 14px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+  .hero p{font-size:18.5px;max-width:560px;color:#F5E9DA}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  .photo{border-radius:16px;background:linear-gradient(135deg,#EEDFCB,#DCC4A6);display:grid;place-items:center;color:var(--clove-2);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;position:relative;overflow:hidden}
+  .photo:after{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(58,34,29,.28);border-radius:10px}
+  .photo span{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:0 20px}
+  .photo svg{width:30px;height:30px;opacity:.7}
+
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .about .photo{aspect-ratio:4/3.4}
+  .ticks{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+  .ticks li{position:relative;padding-left:26px;font-size:15.5px}
+  .ticks li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--saffron)}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+  @media(max-width:520px){.ticks{grid-template-columns:1fr}}
+
+  .stay{background:var(--oat)}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+  .card{background:var(--paper);border-radius:16px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+  .card .photo{aspect-ratio:16/10;border-radius:0}
+  .card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .card .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .card h3{font-size:26px}
+  .card .rate{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .card .rate small{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}
+  .card p{font-size:15px;color:var(--muted);margin:8px 0 16px;flex:1}
+  .card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .card .meta span{font-size:12.5px;background:var(--oat);border-radius:6px;padding:4px 10px;color:var(--clove-2)}
+  .card .btn{padding:12px 16px;font-size:14px;background:var(--clove);color:#fff}
+  .note{margin-top:18px;font-size:14.5px;color:var(--muted)}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  .groups{background:var(--clove);color:var(--oat)}
+  .groups .eyebrow{color:var(--saffron)}
+  .groups h2{color:#fff}
+  .groups .lede{color:#D9C7BB}
+  .gsplit{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+  .steps{list-style:none;counter-reset:s;border-top:1px solid rgba(255,255,255,.18)}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .steps li:before{content:"0" counter(s);font-family:var(--slab);font-size:20px;color:var(--saffron);font-weight:600}
+  .steps b{display:block;color:#fff;font-size:17px}
+  .steps span{font-size:15px;color:#D9C7BB}
+  .groups .btn{margin-top:24px}
+  .groups .photo{aspect-ratio:4/3;background:linear-gradient(135deg,#4A3027,#6A4535);color:#EBD9C6}
+  .groups .photo:after{border-color:rgba(255,255,255,.3)}
+  .specials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+  .sp{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+  .sp .d{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--bud);font-weight:800}
+  .sp h3{font-size:23px;margin:6px 0}
+  .sp p{font-size:15px;color:var(--muted)}
+  .sp .pr{font-family:var(--slab);font-size:18px;margin-top:10px;font-weight:700}
+  .menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:30px;border-top:2px solid var(--clove)}
+  .menu div{padding:18px 18px 0 0}
+  .menu h3{font-size:22px}
+  .menu p{font-size:14.5px;color:var(--muted);margin-top:4px}
+  .hours{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+  .hours span{background:var(--oat);border-radius:8px;padding:7px 12px;font-size:14px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--oat);border-radius:10px;padding:4px;gap:4px;margin-bottom:6px}
+  .tabs button{font:inherit;font-size:15px;font-weight:700;border:0;background:transparent;padding:11px;border-radius:8px;cursor:pointer;color:var(--clove-2)}
+  .tabs button.on{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);color:var(--clove)}
+  .hide{display:none}
+  @media(max-width:860px){.specials{grid-template-columns:1fr}.menu{grid-template-columns:1fr 1fr}}
+  @media(max-width:860px){.gsplit{grid-template-columns:1fr;gap:26px}}
+
+  .near{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;border-top:2px solid var(--clove)}
+  .near div{padding:20px 20px 0 0}
+  .near .n{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .near h3{font-size:21px;margin:4px 0 6px}
+  .near p{font-size:14.5px;color:var(--muted)}
+  @media(max-width:860px){.near{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.near{grid-template-columns:1fr}.near div{padding:18px 0;border-bottom:1px solid var(--line)}}
+
+  .pay{background:var(--saffron-soft)}
+  .pay .wrap{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+  .mpesa{width:84px;height:84px;border-radius:20px;background:#fff;display:grid;place-items:center;font-family:var(--slab);font-weight:700;color:var(--leaf);font-size:15px;text-align:center;line-height:1.05;box-shadow:0 10px 24px -14px rgba(58,34,29,.5)}
+  .pay h2{font-size:clamp(26px,4vw,34px);margin:0 0 6px}
+  .pay p{color:var(--clove-2);max-width:640px}
+  .pay section{padding:40px 0}
+  @media(max-width:560px){.pay .wrap{grid-template-columns:1fr}}
+
+  .enquire{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
+  form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 24px 50px -36px rgba(58,34,29,.5)}
+  .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .row > div, .enquire > *{min-width:0}
+  label{display:block;font-size:13px;font-weight:700;color:var(--clove-2);margin:14px 0 6px}
+  input,select{width:100%;min-width:0;max-width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--clove)}
+  .seg{display:grid;grid-template-columns:1fr 1fr;background:var(--oat);border-radius:10px;padding:4px;gap:4px}
+  .seg input{display:none}
+  .seg label{margin:0;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500}
+  .seg input:checked + label{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);font-weight:700}
+  form .btn{width:100%;margin-top:20px;font-size:16px;padding:16px}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center}
+  @media(max-width:860px){.enquire{grid-template-columns:1fr;gap:26px}}
+
+  footer{background:#22160F;color:#BCA996;padding:40px 0 90px;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}
+  footer .logo{color:#fff}
+  footer a{color:#F2E3D6;text-decoration:none}
+  .built{margin-top:18px;font-size:12px;color:#8E766A}
+  .float{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+  .float svg{width:30px;height:30px}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9LF4GNZZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H9LF4GNZZC', {page_title: 'Preview - Le Rustique'});
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a,button'); if(!a) return;
+    gtag('event', 'preview_click', {preview: 'lerustique', button: (a.textContent||'').trim().slice(0,40)});
+  });
+</script>
+</head>
+<body>
+<div class="preview"><b>Preview by Imara Digital</b> · a mockup for Le Rustique, not the live site. Photos, specials, menu and rates are placeholders.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Le Rustique<small>Restaurant &amp; Rooms · Nanyuki</small></a>
+    <div class="nav-links">
+      <a href="#restaurant">Restaurant</a>
+      <a href="#specials">This week</a>
+      <a href="#stay">Rooms</a>
+      <a class="btn btn-wa" href="#enquire">Book</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D2A44"/><stop offset=".5" stop-color="#8A5A5C"/><stop offset=".85" stop-color="#D9956A"/><stop offset="1" stop-color="#E8B482"/></linearGradient>
+      <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".15" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#22160F" stop-opacity=".92"/></linearGradient>
+    </defs>
+    <rect width="1440" height="800" fill="url(#sky)"/>
+    <path d="M520 560 L760 330 L800 300 L828 318 L860 296 L900 330 L1160 560Z" fill="#5E4A5A" opacity=".85"/>
+    <path d="M776 318 L800 300 L828 318 L860 296 L884 318 L860 330 L832 324 L806 334Z" fill="#EDE3E6" opacity=".85"/>
+    <path d="M0 580 C260 560 560 578 820 566 C1080 554 1260 572 1440 566 L1440 800 L0 800Z" fill="#33261E"/>
+    <g fill="#22160F">
+      <path d="M1040 800 L1040 520 Q1040 430 1130 430 Q1220 430 1220 520 L1220 800 L1190 800 L1190 524 Q1190 462 1130 462 Q1070 462 1070 524 L1070 800Z"/>
+      <rect x="1018" y="500" width="224" height="18"/>
+      <path d="M1340 600 L1344 480 L1352 480 L1356 600Z"/>
+      <path d="M1280 488 C1320 470 1390 470 1420 486 C1390 494 1320 496 1280 488Z"/>
+    </g>
+    <g fill="#F4C27A"><circle cx="1100" cy="560" r="3"/><circle cx="1130" cy="552" r="3"/><circle cx="1160" cy="560" r="3"/></g>
+    <rect width="1440" height="800" fill="url(#shade)"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Restaurant &amp; Rooms · Nanyuki</p>
+    <h1>Le Rustique</h1>
+    <p>Modern Mediterranean cooking, an open fire, and ten garden rooms at the foot of Mount Kenya.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="#enquire" onclick="setTab('table')"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Book a table</a>
+      <a class="btn btn-light" href="#enquire" onclick="setTab('room')">Book a room</a>
+    </div>
+  </div>
+</header>
+
+<section id="restaurant">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">The restaurant</p>
+      <h2>Mediterranean, by the fire.</h2>
+      <p class="lede">An intimate dining room with Moroccan warmth: an open fire, hardwood ceilings and the original flagstone floors. The cooking is refined, modern Mediterranean, made with organic and artisan ingredients, with a wine list from classic French châteaux to New World favourites.</p>
+      <div class="hours"><span>Breakfast ____</span><span>Lunch ____</span><span>Dinner ____</span></div>
+    </div>
+    <div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Dining room photo</span></div>
+  </div>
+</section>
+
+<section class="stay" id="specials">
+  <div class="wrap">
+    <p class="eyebrow">This week at Le Rustique</p>
+    <h2>This week's specials</h2>
+    <p class="lede">The reason locals keep coming back. Updated every week, so guests can see what's cooking before they book a table.</p>
+    <div class="specials"><div class="sp"><span class="d">Special 1</span><h3>This week's starter</h3><p>Your weekly special goes here, with a line about what makes it good.</p><p class="pr">KES ____</p></div><div class="sp"><span class="d">Special 2</span><h3>This week's main</h3><p>Fresh, seasonal and Mediterranean. Updated every week in a minute.</p><p class="pr">KES ____</p></div><div class="sp"><span class="d">Special 3</span><h3>This week's dessert</h3><p>Something sweet to finish, written the way your chef would say it.</p><p class="pr">KES ____</p></div></div>
+    <div class="menu">
+      <div><h3>Starters</h3><p>Your starters go here.</p></div>
+      <div><h3>Mains</h3><p>Your mains go here.</p></div>
+      <div><h3>Desserts</h3><p>Your desserts go here.</p></div>
+      <div><h3>Wine list</h3><p>French châteaux, European and New World.</p></div>
+    </div>
+    <p class="note"><a href="#enquire" onclick="setTab('table')" style="color:var(--bud);font-weight:700">Book a table on WhatsApp →</a></p>
+  </div>
+</section>
+
+<section id="stay">
+  <div class="wrap">
+    <p class="eyebrow">Stay the night</p>
+    <h2>Ten garden rooms</h2>
+    <p class="lede">Set behind the restaurant in the gardens, each room has its own terrace, an en suite with a solar-heated shower, organic toiletries and bathrobes, and a coffee and tea station.</p>
+    <div class="cards">
+      <div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Room photo</span></div><div class="body"><div class="top"><h3>Garden Room</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>A large queen bed, a private terrace onto the garden, and breakfast in the restaurant.</p><div class="meta"><span>Queen bed</span><span>Terrace</span><span>En suite</span></div><a class="btn" href="#enquire" onclick="setTab('room')">Ask about this room</a></div></div>
+      <div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Room photo</span></div><div class="body"><div class="top"><h3>Twin Room</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>Two beds, the same garden terrace and comforts. Cots and extra beds on request.</p><div class="meta"><span>Twin beds</span><span>Terrace</span><span>Family-friendly</span></div><a class="btn" href="#enquire" onclick="setTab('room')">Ask about this room</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="groups">
+  <div class="wrap gsplit">
+    <div>
+      <p class="eyebrow">Pool &amp; Le Shop</p>
+      <h2>Slow afternoons.</h2>
+      <p class="lede">A heated pool with a shallow end for little ones, sunbeds in the garden and drinks from the bar. Then wander over to Le Shop, our deli and café, for coffee, cheeses from the cheese bar and something to take home.</p>
+      <a class="btn btn-wa" href="#enquire" onclick="setTab('room')"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Plan a stay</a>
+    </div>
+    <div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Pool photo</span></div>
+  </div>
+</section>
+
+<section id="near">
+  <div class="wrap">
+    <p class="eyebrow">Find us</p>
+    <h2>Mt. Kenya Road, Nanyuki</h2>
+    <p class="lede">At the foot of Mount Kenya, a short drive from town.</p>
+    <div class="near">
+      <div><span class="n">Restaurant</span><h3>Lunch &amp; dinner</h3><p>Book a table on WhatsApp.</p></div>
+      <div><span class="n">Rooms</span><h3>Bed &amp; breakfast</h3><p>Ten garden rooms.</p></div>
+      <div><span class="n">Email</span><h3>Bookings</h3><p>bookings@lerustique.co.ke</p></div>
+      <div><span class="n">Phone</span><h3>+254 721 609 601</h3><p><a href="tel:+254721609601" style="color:var(--bud);font-weight:700">Tap to call</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="enquire" style="background:var(--oat)">
+  <div class="wrap enquire">
+    <div>
+      <p class="eyebrow">Book direct</p>
+      <h2>Book a table or a room</h2>
+      <p class="lede">Choose what you'd like to book. Your request opens in WhatsApp with everything filled in, and we'll confirm directly.</p>
+      <p class="lede" style="margin-top:14px;font-size:15.5px">Prefer email? bookings@lerustique.co.ke</p>
+    </div>
+    <form id="f">
+      <div class="tabs"><button type="button" id="tb-table" class="on" onclick="setTab('table')">A table</button><button type="button" id="tb-room" onclick="setTab('room')">A room</button></div>
+      <div id="t-table">
+        <div class="row">
+          <div><label for="td">Date</label><input id="td" type="date"></div>
+          <div><label for="tt">Time</label><select id="tt"><option>Lunch, 12:30</option><option>Lunch, 1:30</option><option selected>Dinner, 7:00</option><option>Dinner, 8:00</option></select></div>
+        </div>
+        <label for="tp">People</label><select id="tp"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5–8</option><option>9+</option></select>
+      </div>
+      <div id="t-room" class="hide">
+        <div class="row">
+          <div><label for="in">Arrive</label><input id="in" type="date"></div>
+          <div><label for="out">Leave</label><input id="out" type="date"></div>
+        </div>
+        <div class="row">
+          <div><label for="gu">Guests</label><select id="gu"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+          <div><label for="rt">Room</label><select id="rt"><option>Garden Room (queen)</option><option>Twin Room</option></select></div>
+        </div>
+      </div>
+      <label for="nm">Your name</label><input id="nm" type="text" placeholder="Name">
+      <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Send on WhatsApp</button>
+      <p class="small">No booking fees. You confirm everything directly with us.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top">Le Rustique<small>Restaurant &amp; Rooms · Nanyuki</small></a><p style="margin-top:12px">Mt. Kenya Road, Nanyuki · +254 721 609 601</p></div>
+    <div><p><a href="#enquire">WhatsApp us</a></p></div>
+  </div>
+  <div class="wrap"><p class="built">Website preview by <a href="https://www.imaradigital.digital/" style="color:#E3C27A">Imara Digital</a></p></div>
+</footer>
+
+<a class="float" href="#enquire" aria-label="Book on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg></a>
+
+<script>
+  var WHATSAPP = "254721609601";
+  var TAB = "table";
+  function setTab(t){
+    TAB = t;
+    document.getElementById('t-table').classList.toggle('hide', t!=='table');
+    document.getElementById('t-room').classList.toggle('hide', t!=='room');
+    document.getElementById('tb-table').classList.toggle('on', t==='table');
+    document.getElementById('tb-room').classList.toggle('on', t==='room');
+  }
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(id){ return document.getElementById(id).value; };
+    var msg = TAB==='table'
+      ? "Hello Le Rustique! I'd like to book a table.\nDate: " + g('td') + "\nTime: " + g('tt') + "\nPeople: " + g('tp')
+      : "Hello Le Rustique! I'd like to book a room.\nDates: " + g('in') + " to " + g('out') + "\nGuests: " + g('gu') + "\nRoom: " + g('rt');
+    if(g('nm')) msg += "\nName: " + g('nm');
+    if(window.gtag) gtag('event','preview_form_sent',{preview:'lerustique', type: TAB});
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank");
+  });
+  var fl=document.querySelector('.float');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){fl.style.display=es[0].isIntersecting?'none':'grid';},{threshold:.15}).observe(document.getElementById('enquire'));}
+</script>
+</body>
+</html>
