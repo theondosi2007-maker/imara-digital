@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>M'karafuu Guest Houses Naivasha · Preview by Imara Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clove:#3A221D; --clove-2:#5A3A31; --bud:#9A4A30; --saffron:#E7A43C; --saffron-soft:#FBEBCD;
+    --leaf:#55703F; --paper:#FAF6F0; --oat:#F2EADF; --line:#E6DACB; --muted:#6B5A52; --wa:#25D366;
+    --slab:"Zilla Slab", Rockwell, Georgia, serif; --sans:"Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--clove);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:var(--slab);font-weight:700;line-height:1.08}
+  h2{font-size:clamp(30px,5vw,44px);margin:8px 0 14px}
+  .eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bud);font-weight:700}
+  .lede{font-size:17.5px;color:var(--muted);max-width:620px}
+  section{padding:72px 0}
+  .preview{background:#071735;color:#DCE3F0;font-size:12.5px;text-align:center;padding:8px 14px}
+  .preview b{color:#fff}
+  nav{position:sticky;top:0;z-index:20;background:rgba(250,246,240,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:var(--slab);font-size:23px;font-weight:700;text-decoration:none}
+  .logo small{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--bud);font-weight:700;margin-top:-3px}
+  .nav-links{display:flex;gap:24px;align-items:center}
+  .nav-links a{text-decoration:none;font-size:14.5px;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;text-decoration:none;border-radius:10px;padding:14px 22px;border:0;cursor:pointer;font-family:var(--sans)}
+  .btn svg{width:19px;height:19px}
+  .btn-wa{background:var(--wa);color:#06261A}
+  .btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45)}
+  .nav-links .btn{padding:9px 15px;font-size:13.5px;color:#06261A}
+  @media(max-width:760px){.nav-links a:not(.btn){display:none}}
+
+  .hero{position:relative;min-height:600px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+  .hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+  .hero .wrap{position:relative;padding-bottom:56px;padding-top:120px;width:100%}
+  .hero .eyebrow{color:var(--saffron-soft)}
+  .hero h1{font-size:clamp(40px,7.5vw,72px);margin:10px 0 14px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+  .hero p{font-size:18px;max-width:540px;color:#F6E7DA}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  .photo{border-radius:16px;background:linear-gradient(135deg,#F1E4D6,#E3CDB6);display:grid;place-items:center;color:var(--clove-2);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;position:relative;overflow:hidden}
+  .photo:after{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(58,34,29,.28);border-radius:10px}
+  .photo span{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;padding:0 20px}
+  .photo svg{width:30px;height:30px;opacity:.7}
+
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .about .photo{aspect-ratio:4/3.4}
+  .ticks{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+  .ticks li{position:relative;padding-left:26px;font-size:15.5px}
+  .ticks li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--saffron)}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+  @media(max-width:520px){.ticks{grid-template-columns:1fr}}
+
+  .stay{background:var(--oat)}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+  .card{background:var(--paper);border-radius:16px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+  .card .photo{aspect-ratio:16/10;border-radius:0}
+  .card .body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .card .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .card h3{font-size:26px}
+  .card .rate{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .card .rate small{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}
+  .card p{font-size:15px;color:var(--muted);margin:8px 0 16px;flex:1}
+  .card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .card .meta span{font-size:12.5px;background:var(--oat);border-radius:6px;padding:4px 10px;color:var(--clove-2)}
+  .card .btn{padding:12px 16px;font-size:14px;background:var(--clove);color:#fff}
+  .note{margin-top:18px;font-size:14.5px;color:var(--muted)}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+
+  .groups{background:var(--clove);color:var(--oat)}
+  .groups .eyebrow{color:var(--saffron)}
+  .groups h2{color:#fff}
+  .groups .lede{color:#D9C7BB}
+  .gsplit{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+  .steps{list-style:none;counter-reset:s;border-top:1px solid rgba(255,255,255,.18)}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .steps li:before{content:"0" counter(s);font-family:var(--slab);font-size:20px;color:var(--saffron);font-weight:600}
+  .steps b{display:block;color:#fff;font-size:17px}
+  .steps span{font-size:15px;color:#D9C7BB}
+  .groups .btn{margin-top:24px}
+  @media(max-width:860px){.gsplit{grid-template-columns:1fr;gap:26px}}
+
+  .near{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:34px;border-top:2px solid var(--clove)}
+  .near div{padding:20px 20px 0 0}
+  .near .n{font-family:var(--slab);font-size:18px;color:var(--bud);font-weight:600}
+  .near h3{font-size:21px;margin:4px 0 6px}
+  .near p{font-size:14.5px;color:var(--muted)}
+  @media(max-width:860px){.near{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.near{grid-template-columns:1fr}.near div{padding:18px 0;border-bottom:1px solid var(--line)}}
+
+  .pay{background:var(--saffron-soft)}
+  .pay .wrap{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+  .mpesa{width:84px;height:84px;border-radius:20px;background:#fff;display:grid;place-items:center;font-family:var(--slab);font-weight:700;color:var(--leaf);font-size:15px;text-align:center;line-height:1.05;box-shadow:0 10px 24px -14px rgba(58,34,29,.5)}
+  .pay h2{font-size:clamp(26px,4vw,34px);margin:0 0 6px}
+  .pay p{color:var(--clove-2);max-width:640px}
+  .pay section{padding:40px 0}
+  @media(max-width:560px){.pay .wrap{grid-template-columns:1fr}}
+
+  .enquire{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
+  form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 24px 50px -36px rgba(58,34,29,.5)}
+  .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .row > div, .enquire > *{min-width:0}
+  label{display:block;font-size:13px;font-weight:700;color:var(--clove-2);margin:14px 0 6px}
+  input,select{width:100%;min-width:0;max-width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--clove)}
+  .seg{display:grid;grid-template-columns:1fr 1fr;background:var(--oat);border-radius:10px;padding:4px;gap:4px}
+  .seg input{display:none}
+  .seg label{margin:0;text-align:center;padding:10px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500}
+  .seg input:checked + label{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.08);font-weight:700}
+  form .btn{width:100%;margin-top:20px;font-size:16px;padding:16px}
+  .small{font-size:12.5px;color:var(--muted);margin-top:10px;text-align:center}
+  @media(max-width:860px){.enquire{grid-template-columns:1fr;gap:26px}}
+
+  footer{background:#2A1814;color:#BFA99C;padding:40px 0 90px;font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between}
+  footer .logo{color:#fff}
+  footer a{color:#F2E3D6;text-decoration:none}
+  .built{margin-top:18px;font-size:12px;color:#8E766A}
+  .float{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+  .float svg{width:30px;height:30px}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9LF4GNZZC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H9LF4GNZZC', {page_title: 'Preview - Mkarafuu'});
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a,button'); if(!a) return;
+    gtag('event', 'preview_click', {preview: 'mkarafuu', button: (a.textContent||'').trim().slice(0,40)});
+  });
+</script>
+</head>
+<body>
+<div class="preview"><b>Preview by Imara Digital</b> · a mockup for M'karafuu Guest Houses, not the live site. Photos, apartment names and rates are placeholders.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">M'karafuu<small>Guest Houses · Naivasha</small></a>
+    <div class="nav-links">
+      <a href="#stay">Apartments</a>
+      <a href="#groups">Groups &amp; seminars</a>
+      <a href="#near">Location</a>
+      <a class="btn btn-wa" href="#enquire">Check dates</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B2B4A"/><stop offset=".45" stop-color="#B8665A"/><stop offset=".75" stop-color="#F0B26A"/><stop offset="1" stop-color="#F7D49A"/></linearGradient>
+      <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C98B63"/><stop offset="1" stop-color="#6E4A44"/></linearGradient>
+      <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset=".25" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#2A1814" stop-opacity=".9"/></linearGradient>
+    </defs>
+    <rect width="1440" height="800" fill="url(#sky)"/>
+    <circle cx="1240" cy="330" r="50" fill="#FFE3B0" opacity=".9"/>
+    <path d="M0 520 L300 505 L520 470 L640 405 L700 392 L760 398 L820 380 L870 392 L960 450 L1140 492 L1440 500 L1440 600 L0 600Z" fill="#7A4E57" opacity=".75"/>
+    <path d="M770 398 L790 386 L820 380 L850 388 L835 394 L800 392Z" fill="#5E3B45" opacity=".8"/>
+    <rect y="540" width="1440" height="70" fill="url(#lake)"/>
+    <path d="M0 556 h1440" stroke="#F7D49A" stroke-width="2" opacity=".35"/>
+    <g fill="#2E1B18">
+      <path d="M0 610 C240 590 520 602 800 596 C1080 590 1260 604 1440 598 L1440 800 L0 800Z"/>
+      <path d="M1130 600 L1134 520 L1140 520 L1144 600Z"/>
+      <path d="M1040 528 C1080 510 1200 508 1250 526 C1200 534 1090 536 1040 528Z"/>
+      <path d="M1075 512 C1110 498 1180 498 1215 510 C1180 516 1110 518 1075 512Z"/>
+      <path d="M260 606 L263 548 L268 548 L271 606Z"/>
+      <path d="M195 556 C230 542 305 542 335 556 C300 562 230 563 195 556Z"/>
+      <rect x="560" y="560" width="70" height="44"/><path d="M552 562 L595 534 L638 562Z"/>
+      <rect x="650" y="572" width="54" height="32"/><path d="M644 574 L677 552 L710 574Z"/>
+    </g>
+    <rect width="1440" height="800" fill="url(#shade)"/>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">Serviced apartments · Naivasha</p>
+    <h1>M'karafuu Guest Houses</h1>
+    <p>Six private apartments in Lakeview Estate, each with a kitchenette, free WiFi and parking. For a weekend away, a work trip, or a week of training in Naivasha.</p>
+    <div class="actions">
+      <a class="btn btn-wa" href="#enquire"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Check dates on WhatsApp</a>
+      <a class="btn btn-light" href="#stay">See the apartments</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">Karibu</p>
+      <h2>A place of your own in town.</h2>
+      <p class="lede">At M'karafuu you get the whole apartment to yourself: cook your own meals, catch the match on the Smart TV, and come back to a clean room every day.</p>
+      <ul class="ticks">
+        <li>Whole apartment to yourself</li>
+        <li>Kitchenette in every unit</li>
+        <li>Free WiFi and Smart TV</li>
+        <li>Free parking on site</li>
+        <li>Daily housekeeping</li>
+        <li>Check in until 11:30pm</li>
+      </ul>
+    </div>
+    <div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Your best apartment photo</span></div>
+  </div>
+</section>
+
+<section class="stay" id="stay">
+  <div class="wrap">
+    <p class="eyebrow">Apartments</p>
+    <h2>Where you'll stay</h2>
+    <p class="lede">Your apartments with real photos and your rates in shillings, so guests know what they're getting before they message you.</p>
+    <div class="cards">
+      <div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Apartment photo</span></div><div class="body"><div class="top"><h3>Deluxe Apartment</h3><span class="rate">KES ____ <small>/ night</small></span></div><p>A comfortable apartment for two, with a kitchenette, living area and Smart TV. Your own description goes here.</p><div class="meta"><span>Sleeps 2</span><span>Kitchenette</span><span>City view</span></div><a class="btn" href="#enquire">Ask about this apartment</a></div></div>
+      <div class="card"><div class="photo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Apartment photo</span></div><div class="body"><div class="top"><h3>Weekly &amp; long stays</h3><span class="rate">KES ____ <small>/ week</small></span></div><p>In Naivasha for work or a course? Stay a week or more at a lower rate, with housekeeping included.</p><div class="meta"><span>7+ nights</span><span>Housekeeping</span><span>Free parking</span></div><a class="btn" href="#enquire">Ask about a long stay</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="groups" id="groups">
+  <div class="wrap gsplit">
+    <div>
+      <p class="eyebrow">Groups &amp; seminars</p>
+      <h2>Bringing a team to Naivasha?</h2>
+      <p class="lede">For seminars, trainings and conferences, book several apartments in one go. Your group stays together, close to town, with parking for everyone.</p>
+      <a class="btn btn-wa" href="#enquire" onclick="document.getElementById('p2').checked=true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Ask about a group booking</a>
+    </div>
+    <ol class="steps">
+      <li><div><b>Tell us your dates</b><span>And how many people are coming.</span></div></li>
+      <li><div><b>We hold the apartments</b><span>Up to six apartments for your group.</span></div></li>
+      <li><div><b>One quote for everyone</b><span>Pay by M-Pesa or bank transfer.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="near">
+  <div class="wrap">
+    <p class="eyebrow">Location</p>
+    <h2>Lakeview Estate, Naivasha</h2>
+    <p class="lede">A quiet estate, a short drive from everything you need in town.</p>
+    <div class="near">
+      <div><span class="n">5 min drive</span><h3>District Hospital</h3><p>Naivasha District Hospital.</p></div>
+      <div><span class="n">7 min drive</span><h3>Buffalo Mall</h3><p>Shops, supermarket and places to eat.</p></div>
+      <div><span class="n">Nearby</span><h3>KWS Training Institute</h3><p>Handy for courses and trainings.</p></div>
+      <div><span class="n">About 2 hrs</span><h3>From Nairobi</h3><p>An easy drive for a weekend away.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="pay"><section><div class="wrap">
+  <div class="mpesa">M-PESA</div>
+  <div><h2>Book on WhatsApp, pay by M-Pesa</h2><p>Confirm your dates with us on WhatsApp, then pay by M-Pesa to our Till or Paybill <b>[number here]</b>. No booking fees, and you deal with us directly.</p></div>
+</div></section></div>
+
+<section id="enquire">
+  <div class="wrap enquire">
+    <div>
+      <p class="eyebrow">Book direct</p>
+      <h2>Check your dates</h2>
+      <p class="lede">Tell us when you're coming. Your request opens in WhatsApp with everything filled in, and we'll reply directly.</p>
+    </div>
+    <form id="f">
+      <div class="row">
+        <div><label for="in">Arrive</label><input id="in" type="date" required></div>
+        <div><label for="out">Leave</label><input id="out" type="date" required></div>
+      </div>
+      <div class="row">
+        <div><label for="gu">Guests</label><select id="gu"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5–10</option><option>10+</option></select></div>
+        <div><label for="ap">Apartments</label><select id="ap"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+      </div>
+      <label>Staying for</label>
+      <div class="seg">
+        <input type="radio" name="why" id="p1" value="Leisure / weekend" checked><label for="p1">Leisure</label>
+        <input type="radio" name="why" id="p2" value="Work / seminar"><label for="p2">Work or seminar</label>
+      </div>
+      <label for="nm">Your name</label><input id="nm" type="text" placeholder="Name">
+      <button class="btn btn-wa" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg> Send on WhatsApp</button>
+      <p class="small">No booking fees. You confirm everything directly with us.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top">M'karafuu<small>Guest Houses · Naivasha</small></a><p style="margin-top:12px">Lakeview Estate, Naivasha, Kenya</p></div>
+    <div><p><a href="#enquire">WhatsApp us</a></p></div>
+  </div>
+  <div class="wrap"><p class="built">Website preview by <a href="https://www.imaradigital.digital/" style="color:#E7C9A8">Imara Digital</a></p></div>
+</footer>
+
+<a class="float" href="#enquire" aria-label="Check dates on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.28-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg></a>
+
+<script>
+  var WHATSAPP = "254785438434";
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var g = function(id){ return document.getElementById(id).value; };
+    var why = document.querySelector('input[name=why]:checked').value;
+    var msg = "Hello M'karafuu! I'd like to check availability.\n" +
+      "Dates: " + g('in') + " to " + g('out') + "\n" +
+      "Guests: " + g('gu') + ", apartments: " + g('ap') + "\n" +
+      "Staying for: " + why + (g('nm') ? "\nName: " + g('nm') : "");
+    if(window.gtag) gtag('event','preview_form_sent',{preview:'mkarafuu'});
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank");
+  });
+  var fl=document.querySelector('.float');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){fl.style.display=es[0].isIntersecting?'none':'grid';},{threshold:.15}).observe(document.getElementById('enquire'));}
+</script>
+</body>
+</html>
